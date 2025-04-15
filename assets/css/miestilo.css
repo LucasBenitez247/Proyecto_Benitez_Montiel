@@ -1,0 +1,65 @@
+ 
+    /* Establecer una altura personalizada para el carrusel */
+  .carousel-item img {
+    height: 600px; /* Ajusta la altura según tu necesidad */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+  }
+
+  /* Asegurarse de que el carrusel no se estire en la altura */
+  .carousel-inner {
+    height: 600px; /* Ajusta la altura aquí para mantener consistencia */
+  }
+  .texto-gris {
+    color: rgb(182, 182, 182); /* Cambia el color a rojo */
+  }
+
+  .footer-list {
+    color: aliceblue;
+    list-style: none; /* Opcional: para sacar los puntitos */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espacio entre los elementos */
+  }
+  .footer-list a {
+    text-decoration: none;
+    color: white; /* también podés definir el color acá si los <a> están dentro del <li> */
+  }
+  
+ 
+  
+
+ /* .container{
+    margin: 80px auto;
+    width: 90%;
+    height: 400px;
+    max-width: 500px;
+    outline: 4px solid;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 100px 10em 1fr;
+  }
+.element {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.elemento-1{
+  background-color: #720606;
+  grid-column: 1/5;
+}
+.elemento-2{
+  background-color: #2c0672;
+  grid-column: 1/5;
+}
+.elemento-3{
+  background-color: #06721d;
+  grid-column: 1/7;
+}
+.elemento-4{
+  background-color: #f6fa0c;
+  grid-column: 5/7;
+}*/
