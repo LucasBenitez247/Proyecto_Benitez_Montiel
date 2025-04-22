@@ -1,0 +1,5 @@
+/*Corrijo tamaño de card*/
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }

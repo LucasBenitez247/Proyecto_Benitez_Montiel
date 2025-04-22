@@ -1,7 +1,7 @@
 <link href="<?= base_url('assets/css/mi_estilo_footer.css')?>" rel="stylesheet" >
 <footer class="pie" style="background-color:rgb(2, 53, 90);">
   
-    <footer class = "footer">
+    <footer class = "footer mt-5">
             <div class = "container-pie">
                 <div class = "footer-row">
                     <div class = "footer-links ">

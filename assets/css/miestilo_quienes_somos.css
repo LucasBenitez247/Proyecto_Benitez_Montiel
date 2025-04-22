@@ -1,18 +1,35 @@
-.titulo{
+.titulo {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 46px;
     margin-bottom: 30px; 
 }
 
-.columna-1{
+.columna-equipo {
     display: flex;
     flex-direction: row;
-    gap: 80px;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Para que se apilen en móviles */
+    gap: 40px;
 }
-.columna-2{
+
+.columna-persona {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
     display: flex;
-    flex-direction: row;
-    gap: 80px;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.columna-persona img {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.columna-persona p {
+    font-weight: 300;
 }

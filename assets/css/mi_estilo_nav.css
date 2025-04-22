@@ -76,3 +76,9 @@
   .nav-effect:hover a:before {
     width: 100%;
   }
+  @media (max-width: 991.98px) {
+    .navbar {
+      border: none !important;
+    }
+  }
+  
