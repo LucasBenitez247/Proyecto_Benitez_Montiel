@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/mi_estilo_productos.css') ?>">
-<h1>Producto</h1>
+
 <div class="container my-5">
     <h1 class="mb-4"><?= esc($titulo) ?></h1>
 

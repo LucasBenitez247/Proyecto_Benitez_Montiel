@@ -70,9 +70,8 @@
 }
 
 .slider .slide {
-  width: 15vw;      /*  O puedes ajustar esto: 20vw = 5 imágenes por fila */
-  height: 15vw;     /*  Mantiene proporción. Puedes usar % si prefieres. */
- 
+  width: 15vw;      
+  height: 15vw;     
   display: flex; /*  Flex para centrar */
   align-items: center; /*  Centrado vertical */
   justify-content: center; /*  Centrado horizontal */
@@ -102,17 +101,17 @@
 .custom-card {
   cursor: pointer;
   position: relative;
-  background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde blanco translúcido */
-  backdrop-filter: blur(8px); /* ✨ Acá ocurre la magia del blur */
-  -webkit-backdrop-filter: blur(8px); /* Soporte para Safari */
+  background: rgba(255, 255, 255, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px); 
   border-radius: 1rem;
   transition: all 0.3s ease;
   overflow: hidden;
 }
 
 .custom-card:hover {
-  border: 1px solid rgba(34, 28, 87, 0.4); /* Borde rojo translúcido en hover */
+  border: 1px solid rgba(34, 28, 87, 0.4); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
@@ -122,15 +121,15 @@
   object-fit: cover;
 }
 .custom-card .btn {
-  background-color: #1100ffb9; /* Color de fondo rojo */
-  border-color: #1100ffb9; /* Bordes del botón */
-  color: white; /* Color del texto del botón */
+  background-color: #1100ffb9; 
+  border-color: #1100ffb9; 
+  color: white;
 }
 
 .custom-card .btn:hover {
-  background-color: #1100ff; /* Rojo más oscuro al hacer hover */
+  background-color: #1100ff; 
   border-color: #1100ff;
-  color: #fff; /* Color blanco en el texto al pasar el mouse */
+  color: #fff; 
 }
 
 .titulo{
@@ -140,36 +139,4 @@
   border-bottom: 2px solid #001b5ec4;
   display: inline-block;
 }
- /* .container{
-    margin: 80px auto;
-    width: 90%;
-    height: 400px;
-    max-width: 500px;
-    outline: 4px solid;
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: 100px 10em 1fr;
-  }
-.element {
-  color: #fff;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
 
-.elemento-1{
-  background-color: #720606;
-  grid-column: 1/5;
-}
-.elemento-2{
-  background-color: #2c0672;
-  grid-column: 1/5;
-}
-.elemento-3{
-  background-color: #06721d;
-  grid-column: 1/7;
-}
-.elemento-4{
-  background-color: #f6fa0c;
-  grid-column: 5/7;
-}*/
