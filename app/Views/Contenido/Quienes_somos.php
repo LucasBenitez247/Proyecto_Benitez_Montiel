@@ -7,6 +7,7 @@
                 <h2 class="titulo">
                     ¿Quiénes somos?
                 </h2>
+                <p><img src="<?= base_url('assets/img/logo_f1.png') ?>" alt="Logo F1 Store" class="logo-operador my-1"></p>
                 <p class="fw-light">
                     Somos una empresa de jóvenes estudiantes en Licenciatura en Sistemas apasionados por la Fórmula Uno.
                 </p>

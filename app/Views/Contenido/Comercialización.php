@@ -4,9 +4,7 @@
 <div class="container py-5">
   <h1 class="titulo mb-5">Comercialización</h1>
 
-  <!-- UNA sola row para ambas columnas -->
   <div class="row g-5">
-    <!-- COLUMNA 1 -->
     <div class="col-md-6">
       <h2 class="subtitulo">Tipos de Entrega</h2>
       <ul>
@@ -20,8 +18,7 @@
       </ul>
       <img src="<?= base_url('assets/img/correo_argentino.png') ?>" alt="Correo Argentino" class="icono-img">
     </div>
-
-    <!-- COLUMNA 2 -->
+    
     <div class="col-md-6">
       <h2 class="subtitulo">Formas de Pago</h2>
       <p><strong>Disponemos de los siguientes medios de pago:</strong></p>
@@ -35,6 +32,39 @@
       <i class="fa-brands fa-cc-visa icono-tarjeta"></i>
       <i class="fa-brands fa-cc-mastercard icono-tarjeta"></i>
       <i class="fa-brands fa-cc-paypal icono-tarjeta"></i>
+    </div>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-50">
+      <img src="assets/img/descuento_efectivo.png" class="card-img-top" alt="...">
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-50">
+      <img src="assets/img/descuento_transferencia.png" class="card-img-top" alt="...">
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-50">
+      <img src="assets/img/go_cuotas.png" class="card-img-top" alt="...">
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-50">
+      <img src="assets/img/credito.png" class="card-img-top" alt="...">
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-50">
+      <img src="assets/img/debito.png" class="card-img-top" alt="...">
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-50">
+      <img src="assets/img/envios.png" class="card-img-top" alt="...">
     </div>
   </div>
 </div>
