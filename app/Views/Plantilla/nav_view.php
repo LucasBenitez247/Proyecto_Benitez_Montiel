@@ -34,8 +34,7 @@
                     <li><a class="dropdown-item" href="<?= base_url('productos/remeras'); ?>">Remeras</a></li>
                     <li><a class="dropdown-item" href="<?= base_url('productos/gorras'); ?>">Gorras</a></li>
                     <li><a class="dropdown-item" href="<?= base_url('productos/buzos'); ?>">Buzos</a></li>
-
-                  <li><a class="dropdown-item" href="#">Autitos Coleccionables</a></li>
+                    <li><a class="dropdown-item" href="<?= base_url('productos/autos'); ?>">Autitos Coleccionables</a></li>
                 </ul>
               </li>
               <li class="nav-item ">

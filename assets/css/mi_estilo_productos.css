@@ -1,5 +1,31 @@
-/*Corrijo tamaño de card*/
+.custom-card {
+  cursor: pointer;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.custom-card:hover {
+  border: 1px solid rgba(34, 28, 87, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
 .card-img-top {
-    height: 250px;
-    object-fit: cover;
-  }
+  height: 350px;
+  object-fit: cover;
+}
+.custom-card .btn {
+  background-color: #1100ffb9;
+  border-color: #1100ffb9;
+  color: white;
+}
+.custom-card .btn:hover {
+  background-color: #1100ff;
+  border-color: #1100ff;
+  color: #fff;
+}
