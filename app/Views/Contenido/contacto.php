@@ -9,7 +9,7 @@
       <p><strong>Email:</strong><br>tiendaf1natic@gmail.com</p>
       <p><strong>Dirección:</strong></p>
       <ul>
-        <li>En Corrientes Capital: 9 de julio 1449</li>
+        <li>En Corrientes Capital: 9 de julio 1449.</li>
       </ul>
     </div>
 
