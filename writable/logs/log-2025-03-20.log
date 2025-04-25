@@ -1,0 +1,27 @@
+CRITICAL - 2025-03-20 14:08:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "principal.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('principal.html')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('principal.html', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('principal.html')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-20 14:08:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "practico/principal.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('practico/principal.html')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('practico/principal.html', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('practico/principal.html')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-20 14:08:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "practico/principal.html"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('practico/principal.html')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('practico/principal.html', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('practico/principal.html')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

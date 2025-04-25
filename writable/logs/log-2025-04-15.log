@@ -1,0 +1,250 @@
+CRITICAL - 2025-04-15 12:49:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Producto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Producto.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 3 APPPATH\Controllers\Home.php(36): view('Contenido/Producto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 12:52:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Producto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Producto.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 3 APPPATH\Controllers\Home.php(36): view('Contenido/Producto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 12:52:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "plantillas/header_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('plantillas/header_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('plantillas/header_view', [], true)
+ 3 APPPATH\Controllers\Home.php(42): view('plantillas/header_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->categoria('remeras')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 12:56:39 --> ParseError: syntax error, unexpected token "."
+in APPPATH\Controllers\Home.php on line 42.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Proyecto_2025\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 12:58:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Producto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Producto.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 12:58:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Producto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Producto.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 12:58:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Producto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Producto.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 12:58:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Producto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Producto.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 12:58:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Producto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Producto.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 12:59:37 --> ErrorException: Undefined variable $categoria
+in APPPATH\Views\Contenido\Producto.php on line 7.
+ 1 APPPATH\Views\Contenido\Producto.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoria', 'C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:41:43 --> ErrorException: Undefined variable $categoria
+in APPPATH\Views\Contenido\Producto.php on line 7.
+ 1 APPPATH\Views\Contenido\Producto.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoria', 'C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:43:38 --> ErrorException: Undefined variable $categoria
+in APPPATH\Views\Contenido\Producto.php on line 7.
+ 1 APPPATH\Views\Contenido\Producto.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoria', 'C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:43:47 --> ErrorException: Undefined variable $categoria
+in APPPATH\Views\Contenido\Producto.php on line 7.
+ 1 APPPATH\Views\Contenido\Producto.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoria', 'C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:45:09 --> ErrorException: Undefined variable $categoria
+in APPPATH\Views\Contenido\Producto.php on line 7.
+ 1 APPPATH\Views\Contenido\Producto.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoria', 'C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:45:16 --> ErrorException: Undefined variable $categoria
+in APPPATH\Views\Contenido\Producto.php on line 7.
+ 1 APPPATH\Views\Contenido\Producto.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoria', 'C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:45:41 --> ErrorException: Undefined variable $categoria
+in APPPATH\Views\Contenido\Producto.php on line 7.
+ 1 APPPATH\Views\Contenido\Producto.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoria', 'C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:46:00 --> ErrorException: Undefined variable $categoria
+in APPPATH\Views\Contenido\Producto.php on line 7.
+ 1 APPPATH\Views\Contenido\Producto.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoria', 'C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Proyecto_2025\\app\\Views\\Contenido\\Producto.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Producto.php', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('Contenido/Producto.php')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:48:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "plantillas/header_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('plantillas/header_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('plantillas/header_view', [], true)
+ 3 APPPATH\Controllers\Home.php(37): view('plantillas/header_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:48:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "plantillas/header_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('plantillas/header_view.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('plantillas/header_view', [], true)
+ 3 APPPATH\Controllers\Home.php(37): view('plantillas/header_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:49:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Productos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Productos.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Productos', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:49:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Productos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Productos.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Productos', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:49:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Productos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Productos.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Productos', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:49:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Productos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Productos.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Productos', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:49:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Productos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Productos.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Productos', [], true)
+ 3 APPPATH\Controllers\Home.php(38): view('Contenido/Productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:50:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Productos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Productos.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Productos', [], true)
+ 3 APPPATH\Controllers\Home.php(39): view('Contenido/Productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-04-15 13:50:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Contenido/Productos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Contenido/Productos.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Productos', [], true)
+ 3 APPPATH\Controllers\Home.php(39): view('Contenido/Productos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->productos()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
