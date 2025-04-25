@@ -3,21 +3,22 @@
 <div class="container py-5">
   <div class="row">
     <div class="col-md-6">
-      <h1 class="titulo">Contacto</h1>
-      <p>Horarios en la tienda: Lunes a viernes de 9 a 20 hs de corrido.</p>
-      <p><strong>Whatsapp:</strong><br>379-4123456</p>
-      <p><strong>Email:</strong><br>tiendaf1natic@gmail.com</p>
-      <p><strong>Dirección:</strong></p>
-      <ul>
-        <li>En Corrientes Capital: 9 de julio 1449</li>
-      </ul>
+      <h1 id="contacto" class="titulo">Contacto</h1>
+      <p><i class="fa-solid fa-clock"></i>  Horarios: Lunes a viernes de 9 a 20 hs de corrido.</p>
+      <p><i class="fa-solid fa-envelope"></i>   Correo: tiendaf1natic@gmail.com</p>
+      <p><i class="fa-brands fa-square-whatsapp"></i>  WhatsApp: 379-4123456 <br> </p>
+      <p><i class="fab fa-facebook-f"></i>   Facebook: Tienda_f1</p>
+      <p><i class="fa-brands fa-square-instagram"></i>   Instagram: Tienda_f1_nati</p>
+      
+      <p><i class="fa-solid fa-location-dot"></i>   Dirección: Corrientes,Capital: 9 de julio 1449.</p>
+      
     </div>
 
     
 
 
     <div class="col-md-6">
-      <div class="contact-form">
+      <div class="contact-form mt-5">
         <form>
           <label form="nombre">Nombre Completo:</label>
           <input type="text" class="form-control custom-input" placeholder="Ej. María" name="nombre">
