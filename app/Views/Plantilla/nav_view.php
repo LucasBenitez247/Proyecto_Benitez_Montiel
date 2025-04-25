@@ -43,7 +43,20 @@
               <li class="nav-item ">
                 <a class="nav-link" href="<?php echo base_url('terminos_usos'); ?>">Terminos y usos</a>
               </li>
-              
+              <li class="nav-item ">
+                <a class="nav-link" href="<?php echo base_url('login'); ?>">
+                <span class="d-none d-lg-inline"><i class="fa-solid fa-user"></i></span>
+                <span class="d-inline d-lg-none">Iniciar Sesión</span>
+                </a>
+              </li>
+             
+              <li class="nav-item ">
+               <a class="nav-link" href="<?php echo base_url('carrito'); ?>">
+                <span class="d-none d-lg-inline"><i class="fa-solid fa-cart-shopping"></i></span>
+                <span class="d-inline d-lg-none">Carrito</span>
+               </a>
+              </li>
+
             </ul>
           </div>
         </div>

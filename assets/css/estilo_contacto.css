@@ -1,53 +1,53 @@
 .titulo {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 46px;
-  margin-bottom: 30px;
-}
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 46px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .custom-input {
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  .contact-form .btn {
+    background-color: #1100ffb9; /* Color de fondo rojo */
+    border-color: #1100ffb9; /* Bordes del botón */
+    color: white; /* Color del texto del botón */
+  }
+  .contact-form .btn:hover {
+    background-color: #1100ff; /* Rojo más oscuro al hacer hover */
+    border-color: #1100ff;
+    color: #fff; /* Color blanco en el texto al pasar el mouse */
+  }
 
-.contact-form {
-  border: 2px solid #333;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.custom-input {
-  border-radius: 15px;
-  margin-bottom: 10px;
-}
-.contact-form .btn {
-  background-color: #1100ffb9; /* Color de fondo rojo */
-  border-color: #1100ffb9; /* Bordes del botón */
-  color: white; /* Color del texto del botón */
-}
-.contact-form .btn:hover {
-  background-color: #1100ff; /* Rojo más oscuro al hacer hover */
-  border-color: #1100ff;
-  color: #fff; /* Color blanco en el texto al pasar el mouse */
-}
-
-.mapa-full {
-  width: 100vw; /* 100% del ancho de la pantalla */
-  margin-left: calc(-50vw + 50%);
-  background-color: #f9f9f9;
-}
-
-.map-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%; /* Proporción 16:9 */
-  position: relative;
-  height: 0;
-}
-
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border:0;
-}
-p{
-font-size: 18px;
-font-family: Arial, Helvetica, sans-serif;
-line-height: 3;
-}
+  .mapa-full {
+    width: 100vw; /* 100% del ancho de la pantalla */
+    margin-left: calc(-50vw + 50%);
+    background-color: #f9f9f9;
+  }
+  
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    position: relative;
+    height: 0;
+  }
+  
+  .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border:0;
+  }
+ p{
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 3;
+ }

@@ -6,12 +6,12 @@
 
   <div class="row g-5">
     <div class="col-md-6">
-      <h2 class="subtitulo">Tipos de Entrega</h2>
+      <h2 id="entregas" class="subtitulo">Tipos de Entrega</h2>
       <ul>
         <li>Retiros a través del local de lunes a sábados de 9 a 20hs.</li>
         <li>Envíos express 48hs por motomensajería en las dos provincias.</li>
       </ul>
-      <p><strong>Envíos al resto del país:</strong></p>
+      <p id="envios" ><strong>Envíos al resto del país:</strong></p>
       <ul>
         <li>Envíos a domicilio por Correo Argentino a todo el país.</li>
         <li>Envíos a sucursales de Correo Argentino de todo el país.</li>
@@ -20,7 +20,7 @@
     </div>
     
     <div class="col-md-6">
-      <h2 class="subtitulo">Formas de Pago</h2>
+      <h2 id="pagos" class="subtitulo">Formas de Pago</h2>
       <p><strong>Disponemos de los siguientes medios de pago:</strong></p>
       <ul>
         <li>Efectivo 15% OFF, abonando en el local.</li>

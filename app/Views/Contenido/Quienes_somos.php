@@ -4,7 +4,7 @@
     <div class="container text-center">
         <div class="row">
             
-                <h2 class="titulo">
+                <h2 id="nosotros" class="titulo">
                     ¿Quiénes somos?
                 </h2>
                 <p><img src="<?= base_url('assets/img/logo_f1.png') ?>" alt="Logo F1 Store" class="logo-operador my-1"></p>
@@ -26,8 +26,8 @@
             
 
             
-        <div class="container py-3">
-            <div class="columna-equipo">
+        <div id="staff" class="container py-3">
+            <div  class="columna-equipo">
                 <div class="columna-persona">
                     <img src="<?= base_url('assets/img/estudiante_1.JPG') ?>" alt="Avatar">
                     <p>

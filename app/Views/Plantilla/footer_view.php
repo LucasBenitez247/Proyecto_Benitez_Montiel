@@ -7,44 +7,42 @@
                     <div class = "footer-links ">
                         <h4> Quienes somos</h4>
                         <ul class="footer-lista">
-                            <li><a href="<?php echo base_url('somos');?>#nosotros">Nosotros</a></li>
-                            <li><a href="<?php echo base_url('somos');?>#calidad">Calidad y Durabilidad</a></li>
-                            <li><a href="<?php echo base_url('somos');?>#satisfaccion">Satisfacción del Cliente</a></li>
-                            <li><a href="<?php echo base_url('somos');?>#responsabilidad">Responsabilidad Social</a></li>
-                            <li><a href="<?php echo base_url('somos');?>#trayectoria">Nuestra Trayectoria</a></li>
-                            <li><a href="<?php echo base_url('somos');?>#staff">Equipo de Staff</a></li>
+                            <li><a href="<?php echo base_url('nosotros');?>#nosotros">Nosotros</a></li>
+                            
+                            <li><a href="<?php echo base_url('nosotros');?>#staff">Equipo de Staff</a></li>
                             
                         </ul>
                     </div>
                     <div class = "footer-links">
-                        <h4> Productos</h4>
+                        <h4> Comercialización</h4>
                         <ul class="footer-lista">
-                            <li><a href="<?php echo base_url('comercio');?>#pagos">Pagos</a></li>
-                            <li><a href="<?php echo base_url('comercio');?>#envios">Envios</a></li>
-                            <li><a href="<?php echo base_url('comercio');?>#garantia">Garantia</a></li>
-                            <li><a href="<?php echo base_url('comercio');?>#otra_info">Otra Información Util</a></li>
+                            <li><a href="<?php echo base_url('comercio'); ?>#pagos">Pagos</a></li>
+                            <li><a href="<?php echo base_url('comercio'); ?>#envios">Envios</a></li>
+                            <li><a href="<?php echo base_url('comercio'); ?>#entregas">Tipos de entregas</a></li>
                         </ul>
                     </div>
                     <div class = "footer-links">
                         <h4> Contacto</h4>
                         <ul class="footer-lista">
-                            <li><a href="<?php echo base_url('consulta');?>#contacto">Correo Electrónico</a></li>
-                            <li><a href="<?php echo base_url('consulta');?>#contacto">Teléfono</a></li>
-                            <li><a href="<?php echo base_url('consulta');?>#contacto">Razón Social</a></li>
-                            <li><a href="<?php echo base_url('consulta');?>#contacto">Dirección</a></li>
-                            <li><a href="<?php echo base_url('consulta');?>#contacto">Redes Sociales</a></li>
+                            <li><a href="<?php echo base_url('contacto');?>#contacto">Correo Electrónico</a></li>
+                            <li><a href="<?php echo base_url('contacto');?>#contacto">Teléfono</a></li>
+                            <li><a href="<?php echo base_url('contacto');?>#contacto">Dirección</a></li>
+                            <li><a href="<?php echo base_url('contacto');?>#contacto">Redes Sociales</a></li>
+                            <a class="redes" href="https://facebook.com"><i class="fab fa-facebook-f"> </i> </a>
+                            <a class="redes" href="https://instagram.com"><i class="fab fa-instagram"> </i> </a>
                         </ul>    
                     </div>
                     <div class = "footer-links">
                         <h4> Terminos y Usos</h4>
                         <ul class="footer-lista">
-                            <li><a href="<?php echo base_url('terminos');?>#servicios_ofrecidos">Servicios Ofrecidos</a></li>
-                            <li><a href="<?php echo base_url('terminos');?>#politica">Política de Privacidad</a></li>
-                            <li><a href="<?php echo base_url('terminos');?>#condiciones_de_venta">Condiciones de Venta</a></li>
-                            <li><a href="<?php echo base_url('terminos');?>#garantias">Garantias</a></li>
-                            <li><a href="<?php echo base_url('terminos');?>#soporte">Soporte Postventa</a></li>
-                            <li><a href="<?php echo base_url('terminos');?>#formas_de_entregas">Formas de Entrega</a></li>
-                            <li><a href="<?php echo base_url('terminos');?>#otros_terminos">Otros términos</a></li>    
+                            <li><a href="<?php echo base_url('terminos_usos'); ?>#info">Información General</a></li>
+                            <li><a href="<?php echo base_url('terminos_usos'); ?>#servicios"> Productos y Servicios</a></li>
+                            <li><a href="<?php echo base_url('terminos_usos'); ?>#pago">Formas de Pago</a></li>
+                            <li><a href="<?php echo base_url('terminos_usos'); ?>#envios">Entregas y Envíos</a></li>
+                            <li><a href="<?php echo base_url('terminos_usos'); ?>#garantias">Garantías y Cambios</a></li>
+                            <li><a href="<?php echo base_url('terminos_usos'); ?>#soporte">Soporte Postventa</a></li>
+                            <li><a href="<?php echo base_url('terminos_usos'); ?>#privacidad">Política de Privacidad</a></li>
+                            <li><a href="<?php echo base_url('terminos_usos'); ?>#modificaciones"> Modificaciones</a></li>
                         </ul>
                     </div>
                 </div>
