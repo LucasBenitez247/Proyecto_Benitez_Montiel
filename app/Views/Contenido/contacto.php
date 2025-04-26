@@ -25,7 +25,7 @@
           <label form="email">Email:</label>
           <input type="email" class="form-control custom-input" placeholder="Ej: tuemail@gmail.com" name="email">
           <label form="telefono">Telefono:</label>
-          <input type="number" class="form-control custom-input" placeholder="Ej: 379-11111" name="telefono">
+          <input type="number" class="form-control no-arrow" id="telefono" placeholder="Ej: 379-11111" name="telefono">
           <label form="mensaje">Mensaje:</label>
           <textarea class="form-control custom-input" rows="3" placeholder="Ej: Quiero más info sobre..." name="mensaje"></textarea>
           <button type="submit" class="btn mt-2">Enviar</button>
