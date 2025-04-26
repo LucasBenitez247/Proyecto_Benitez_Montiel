@@ -48,4 +48,19 @@ class Home extends BaseController
         .view('Contenido/Producto.php', $data)
         .view('Plantilla/footer_view.php');
     }
+    public function login(): string 
+    {
+        $data['titulo']="Login";
+        return view('Plantilla/header_view.php',$data).view('Plantilla/nav_view.php').view('Contenido/Login.php').view('Plantilla/footer_view.php');
+    }
+    public function carrito(): string 
+    {
+        $data['titulo']="Carrito";
+        return view('Plantilla/header_view.php',$data).view('Plantilla/nav_view.php').view('Contenido/Carrito.php').view('Plantilla/footer_view.php');
+    }
+    public function registro(): string 
+    {
+        $data['titulo']="Registrar";
+        return view('Plantilla/header_view.php',$data).view('Plantilla/nav_view.php').view('Contenido/Registrar.php').view('Plantilla/footer_view.php');
+    }
 }
