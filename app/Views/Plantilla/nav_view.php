@@ -1,6 +1,6 @@
 <body>
 
-<link href="http://localhost/Proyecto_2025/assets/css/mi_estilo_nav.css" rel="stylesheet" > 
+<link href="http://localhost/Proyecto_Benitez_Montiel/assets/css/mi_estilo_nav.css" rel="stylesheet" > 
 
 <link href="assets/js/bootstrap.min.js" rel="stylesheet">
 
@@ -8,7 +8,7 @@
       <nav class="navbar navbar-expand-lg mt-1">
         <div class="container-fluid">
            <a class="navbar-brand" href="#">
-              <img src="http://localhost/Proyecto_2025/assets/img/logo_f1.PNG" alt="Bootstrap" width="40" height="28">
+              <img src="http://localhost/Proyecto_Benitez_Montiel/assets/img/logo_f1.PNG" alt="Bootstrap" width="40" height="28">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
