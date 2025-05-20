@@ -33,7 +33,7 @@ $validation->setRules(
 
           'telefono'   => [
             "required"      => 'El telefono es obligatorio',
-            "max_length"    => 'El número telefónico debe tener un maximo de 15 caracteres'
+            "max_length"    => 'El número telefónico debe tener un maximo de 15 caracteres',
             "min_length"    => 'El número telefónico debe tener un minimo de 7 caracteres'
                 ],
 
@@ -57,7 +57,7 @@ if ($validation->withRequest($request)->run() ){
                $consulta = new Consulta_model();
                $consulta->insert($data);
 
-              return redirect()->route('contact')->with('texto_mensaje', 'Su consulta se envió exitosamente!');
+              return redirect()->route('contacto')->with('texto_mensaje', 'Su consulta se envió exitosamente!');
                         
                 }else{
 

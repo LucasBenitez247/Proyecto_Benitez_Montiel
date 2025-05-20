@@ -33,10 +33,10 @@
       <div class="contact-form mt-5">
         <?php echo form_open ('consulta') ?>
           <label for='nombre' class="form-label">Nombre Completo:</label>
-          <?php echo form_input (['name'=> 'nombre', 'id'=> 'nombre', 'type'=> 'text', 'class'=> 'form-control','placeholder' => 'Ej. María', 'value'= set_value('nombre')]);?>
+          <?php echo form_input (['name'=> 'nombre', 'id'=> 'nombre', 'type'=> 'text', 'class'=> 'form-control','placeholder' => 'Ej. María', 'value'=> set_value('nombre')]);?>
           
           <label for='email' class= "form-lable">Email:</label>
-          <?php echo form_input ([ 'name' => 'email', 'id' => 'email' 'type'=>"text," 'class'=>'form-control custom-input' , 'placeholder'=>'Ej: tuemail@gmail.com', 'value'=> set_value('email')]);?>
+          <?php echo form_input ([ 'name' => 'email', 'id' => 'email', 'type'=>'text', 'class'=>'form-control custom-input' , 'placeholder'=>'Ej: tuemail@gmail.com', 'value'=> set_value('email')]);?>
          
           <label for='telefono' class= "form-label">Telefono:</label>
           <?php echo form_input(['name'=> 'telefono', 'id'=>'telefono', 'type'=>'number', 'class'=>"form-control no-arrow", 'placeholder'=>'Ej: 379-11111', 'value' => set_value('telefono')]);?>
