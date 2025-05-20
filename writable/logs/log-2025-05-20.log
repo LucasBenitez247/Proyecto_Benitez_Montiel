@@ -1,0 +1,18 @@
+CRITICAL - 2025-05-20 12:29:05 --> ParseError: syntax error, unexpected token "=", expecting "]"
+in APPPATH\Views\Contenido\contacto.php on line 36.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/contacto.php', [], true)
+ 3 APPPATH\Controllers\Home.php(26): view('Contenido/contacto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->info()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-20 12:29:06 --> ParseError: syntax error, unexpected token "=", expecting "]"
+in APPPATH\Views\Contenido\contacto.php on line 36.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/contacto.php', [], true)
+ 3 APPPATH\Controllers\Home.php(26): view('Contenido/contacto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->info()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

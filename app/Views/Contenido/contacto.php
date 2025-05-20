@@ -14,22 +14,40 @@
       
     </div>
 
-    
+    <?php if (!empty ($validation)): ?>
+        <div class= "alert alert-danger" role ="alert">
+          <ul>
+            <?php foreach ($validation as $error): ?>
+              <li><?= esc ($error) ?></li>
+              <?php endforeach ?>
+          </ul>
+          </div>
+    <?php endif ?>
+
+    <?php if (session ('texto_mensaje')){
+        echo session ('texto_mensaje');
+    } ?>
 
 
     <div class="col-md-6">
       <div class="contact-form mt-5">
-        <form>
-          <label form="nombre">Nombre Completo:</label>
-          <input type="text" class="form-control custom-input" placeholder="Ej. María" name="nombre">
-          <label form="email">Email:</label>
-          <input type="email" class="form-control custom-input" placeholder="Ej: tuemail@gmail.com" name="email">
-          <label form="telefono">Telefono:</label>
-          <input type="number" class="form-control no-arrow" id="telefono" placeholder="Ej: 379-11111" name="telefono">
-          <label form="mensaje">Mensaje:</label>
-          <textarea class="form-control custom-input" rows="3" placeholder="Ej: Quiero más info sobre..." name="mensaje"></textarea>
-          <button type="submit" class="btn mt-2">Enviar</button>
-        </form>
+        <?php echo form_open ('consulta') ?>
+          <label for='nombre' class="form-label">Nombre Completo:</label>
+          <?php echo form_input (['name'=> 'nombre', 'id'=> 'nombre', 'type'=> 'text', 'class'=> 'form-control','placeholder' => 'Ej. María', 'value'= set_value('nombre')]);?>
+          
+          <label for='email' class= "form-lable">Email:</label>
+          <?php echo form_input ([ 'name' => 'email', 'id' => 'email' 'type'=>"text," 'class'=>'form-control custom-input' , 'placeholder'=>'Ej: tuemail@gmail.com', 'value'=> set_value('email')]);?>
+         
+          <label for='telefono' class= "form-label">Telefono:</label>
+          <?php echo form_input(['name'=> 'telefono', 'id'=>'telefono', 'type'=>'number', 'class'=>"form-control no-arrow", 'placeholder'=>'Ej: 379-11111', 'value' => set_value('telefono')]);?>
+          
+          <label for='mensaje' class= "form-label">Mensaje:</label>
+          <?php echo form_textarea ([ 'name'=>'mensaje', 'id'=> 'mensaje', 'type'=> 'text', 'class'=>'form-control custom-input', 'rows'=>'3', 'placeholder'=>'Ej: Quiero más info sobre...', 'value'=> set_value('mensaje')]);?>
+          
+          <?php echo form_submit('consulta', 'Enviar'," class= 'btn mt-2'");?>
+
+         <?php echo form_close();?>
+         
       </div>
     </div>
   </div>
