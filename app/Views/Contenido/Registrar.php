@@ -1,4 +1,6 @@
 <link href="<?= base_url('assets/css/mi_estilo_registro.css')?>"  rel="stylesheet" >
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <h1>Registro</h1>
 <div class="page-container">
     <div class="form-container">
@@ -13,9 +15,6 @@
           </div>
          <?php endif ?>
        
-       <?php if (session ('texto_mensaje')){
-        echo session ('texto_mensaje');
-        } ?>
 
 
 
@@ -54,3 +53,14 @@
         <?php echo form_close();?>
     </div>
 </div>
+ <!-- SweetAlert2 -->
+      <?php if (session()->getFlashdata('mensaje')): ?>
+      <script>
+        Swal.fire({
+          title: '¡Buen trabajo!',
+          text: '<?= session()->getFlashdata('mensaje') ?>',
+          icon: 'success',
+          confirmButtonText: 'Aceptar'
+        });
+      </script>
+      <?php endif; ?>
