@@ -2,39 +2,55 @@
 <h1>Registro</h1>
 <div class="page-container">
     <div class="form-container">
-        <form>
+
+        <?php if (!empty ($validation)): ?>
+        <div class= "alert alert-danger" role ="alert">
+          <ul>
+            <?php foreach ($validation as $error): ?>
+              <li><?= esc ($error) ?></li>
+              <?php endforeach ?>
+          </ul>
+          </div>
+         <?php endif ?>
+       
+       <?php if (session ('texto_mensaje')){
+        echo session ('texto_mensaje');
+        } ?>
+
+
+
+        <?php echo form_open('registro_usuario')?>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ej. María" name="nombre">
+                <?php echo form_input(['name'=>'nombre','id'=>'nombre', 'type'=>'text', 'class'=>'form-control', 'placeholder'=>'Ej. María', 'value'=> set_value('nombre')]);?>
             </div>
 
             <div class="mb-3">
                 <label for="apellido" class="form-label">Apellido:</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Ej. Perez" name="apellido">
+                <?php echo form_input(['name'=>'apellido', 'id'=>'apellido', 'type'=>'text', 'class'=>'form-control' , 'placeholder'=>'Ej. Perez', 'value'=> set_value('apellido')]);?>
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Ej: tuemail@gmail.com" name="email">
+                <?php echo form_input(['name'=>'email', 'id'=>'email', 'type'=>'email', 'class'=>'form-control', 'placeholder'=>'Ej: tuemail@gmail.com','value'=> set_value('email')])?>
             </div>
 
             <div class="mb-3">
                 <label for="telefono" class="form-label">Teléfono:</label>
-                <input type="number" class="form-control no-arrow" id="telefono" placeholder="Ej: 379-11111" name="telefono">
-
+                <?php echo form_input(['name'=>'telefono', 'id'=>'telefono', 'type'=>'number', 'class'=>'form-control no-arrow' , 'placeholder'=>'Ej: 379-11111', 'value'=> set_value('telefono')]);?>
             </div>
 
             <div class="mb-3">
                 <label for="password" class="form-label">Contraseña:</label>
-                <input type="password" class="form-control" id="password" name="password">
+                <?php echo form_input(['name'=>'password','id'=>'password', 'type'=>'password', 'class'=>'form-control','value'=> set_value('password')]);?>
             </div>
 
             <div class="mb-3">
                 <label for="confirmPassword" class="form-label">Repetir Contraseña:</label>
-                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                <?php echo form_input(['name'=>'confirmPassword', 'id'=>'confirmPassword', 'type'=>'password', 'class'=>'form-control' , 'value'=> set_value('confirmPassword')]);?>
             </div>
-
-            <button type="submit" class="btn btn-primary w-100 mt-3">Registrar</button>
-        </form>
+            <?php echo form_submit('registro_usuario', "Registrarme", "class='btn btn-primary w-100 mt-3'"); ?>
+        
+        <?php echo form_close();?>
     </div>
 </div>
