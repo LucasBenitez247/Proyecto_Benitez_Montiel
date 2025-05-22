@@ -1,4 +1,461 @@
+<<<<<<< HEAD
 INFO - 2025-05-21 12:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-05-21 12:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-05-21 12:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-05-21 12:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+CRITICAL - 2025-05-21 18:58:44 --> ParseError: syntax error, unexpected token "=", expecting "]"
+in APPPATH\Views\Contenido\Registrar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 3 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-21 19:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-21 19:11:08 --> ParseError: syntax error, unexpected token "=", expecting "]"
+in APPPATH\Views\Contenido\Registrar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 3 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 19:23:11 --> ParseError: syntax error, unexpected token "=", expecting "]"
+in APPPATH\Views\Contenido\Registrar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 3 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:32:33 --> ParseError: syntax error, unexpected token "=", expecting "]"
+in APPPATH\Views\Contenido\Registrar.php on line 19.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 3 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:33:39 --> Error: Undefined constant "userRegister"
+in APPPATH\Views\Contenido\Registrar.php on line 16.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:44:37 --> Error: Undefined constant "userRegister"
+in APPPATH\Views\Contenido\Registrar.php on line 16.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:44:43 --> Error: Undefined constant "userRegister"
+in APPPATH\Views\Contenido\Registrar.php on line 16.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:45:21 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 16.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:48:07 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 6.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:48:46 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 6.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:48:47 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 6.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:58:04 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 6.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 22:58:18 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 6.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:00:13 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 6.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:00:15 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 6.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:03:01 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 6.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:25:01 --> Error: Undefined constant "registro_usuario"
+in APPPATH\Views\Contenido\Registrar.php on line 15.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Contenido/Registrar.php', [], true)
+ 4 APPPATH\Controllers\Home.php(64): view('Contenido/Registrar.php')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->registro()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:36:05 --> ParseError: syntax error, unexpected single-quoted string "matches", expecting "]"
+in APPPATH\Controllers\Usuarios_Controller.php on line 53.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Proyecto_Benitez_Montiel\\app\\Controllers\\Usuarios_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Usuarios_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Usuarios_controller')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Usuarios_controller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:36:58 --> CodeIgniter\Validation\Exceptions\ValidationException: "requeride" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('requeride')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', 'Achi070897', [...], [...])
+ 3 APPPATH\Controllers\Usuarios_Controller.php(59): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:37:36 --> CodeIgniter\Validation\Exceptions\ValidationException: "requeride" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('requeride')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 3 APPPATH\Controllers\Usuarios_Controller.php(59): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:38:58 --> CodeIgniter\Validation\Exceptions\ValidationException: "requeride" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('requeride')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 3 APPPATH\Controllers\Usuarios_Controller.php(59): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:40:42 --> CodeIgniter\Validation\Exceptions\ValidationException: "requerid" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('requerid')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 3 APPPATH\Controllers\Usuarios_Controller.php(59): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:41:05 --> CodeIgniter\Validation\Exceptions\ValidationException: "requerid" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('requerid')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 3 APPPATH\Controllers\Usuarios_Controller.php(59): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:42:53 --> CodeIgniter\Validation\Exceptions\ValidationException: "requerid" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('requerid')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 3 APPPATH\Controllers\Usuarios_Controller.php(59): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:43:14 --> CodeIgniter\Validation\Exceptions\ValidationException: "requerid" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('requerid')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 3 APPPATH\Controllers\Usuarios_Controller.php(59): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-21 23:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-21 23:45:02 --> mysqli_sql_exception: Duplicate entry '' for key 'mail_usuario' in C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Benitez_Montiel\app\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+#9 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#10 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyecto_Benitez_Montiel\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-05-21 23:45:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:45:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$jq4dIGkC.D0PdNq07F/cCO1WUZYu6wXtzDWJCtXFcEKvquuMyL5WC\', 2, 1)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$jq4dIGkC.D0PdNq07F/cCO1WUZYu6wXtzDWJCtXFcEKvquuMyL5WC\', 2, 1)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:45:02 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$jq4dIGkC.D0PdNq07F/cCO1WUZYu6wXtzDWJCtXFcEKvquuMyL5WC\', 2, 1)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$jq4dIGkC.D0PdNq07F/cCO1WUZYu6wXtzDWJCtXFcEKvquuMyL5WC\', 2, 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$jq4dIGkC.D0PdNq07F/cCO1WUZYu6wXtzDWJCtXFcEKvquuMyL5WC\', 2, 1)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-05-21 23:48:25 --> mysqli_sql_exception: Duplicate entry '' for key 'mail_usuario' in C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Benitez_Montiel\app\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+#9 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#10 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyecto_Benitez_Montiel\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-05-21 23:48:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:48:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$yBE2SwWxwPyigyXuztdBLettRSwE2XbQz.7GpPQl9rFL19ax0R22.\', 2, 1)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$yBE2SwWxwPyigyXuztdBLettRSwE2XbQz.7GpPQl9rFL19ax0R22.\', 2, 1)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:48:25 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$yBE2SwWxwPyigyXuztdBLettRSwE2XbQz.7GpPQl9rFL19ax0R22.\', 2, 1)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$yBE2SwWxwPyigyXuztdBLettRSwE2XbQz.7GpPQl9rFL19ax0R22.\', 2, 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795086535\', \'$2y$10$yBE2SwWxwPyigyXuztdBLettRSwE2XbQz.7GpPQl9rFL19ax0R22.\', 2, 1)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-05-21 23:49:15 --> mysqli_sql_exception: Duplicate entry '' for key 'mail_usuario' in C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Benitez_Montiel\app\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+#9 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#10 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyecto_Benitez_Montiel\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-05-21 23:49:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:49:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'lalala\', \'lalalla\', \'123456789\', \'$2y$10$uNUGxYprKYdi6KWpPZhEZuL2TyINJPLt5Tw133j0ESIlJFlRalAw2\', 2, 1)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'lalala\', \'lalalla\', \'123456789\', \'$2y$10$uNUGxYprKYdi6KWpPZhEZuL2TyINJPLt5Tw133j0ESIlJFlRalAw2\', 2, 1)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:49:15 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'lalala\', \'lalalla\', \'123456789\', \'$2y$10$uNUGxYprKYdi6KWpPZhEZuL2TyINJPLt5Tw133j0ESIlJFlRalAw2\', 2, 1)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'lalala\', \'lalalla\', \'123456789\', \'$2y$10$uNUGxYprKYdi6KWpPZhEZuL2TyINJPLt5Tw133j0ESIlJFlRalAw2\', 2, 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'lalala\', \'lalalla\', \'123456789\', \'$2y$10$uNUGxYprKYdi6KWpPZhEZuL2TyINJPLt5Tw133j0ESIlJFlRalAw2\', 2, 1)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2025-05-21 23:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-21 23:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-21 23:56:07 --> mysqli_sql_exception: Duplicate entry '' for key 'mail_usuario' in C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Benitez_Montiel\app\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+#9 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+#10 C:\xampp\htdocs\Proyecto_Benitez_Montiel\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyecto_Benitez_Montiel\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2025-05-21 23:56:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:56:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795012333\', \'$2y$10$Xna67pBWbeO5f1XOyPQ69.WEJ0mePvCLVxkiAdermGICCtF5fu6c.\', 2, 1)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795012333\', \'$2y$10$Xna67pBWbeO5f1XOyPQ69.WEJ0mePvCLVxkiAdermGICCtF5fu6c.\', 2, 1)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-05-21 23:56:07 --> [Caused by] mysqli_sql_exception: Duplicate entry '' for key 'mail_usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795012333\', \'$2y$10$Xna67pBWbeO5f1XOyPQ69.WEJ0mePvCLVxkiAdermGICCtF5fu6c.\', 2, 1)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795012333\', \'$2y$10$Xna67pBWbeO5f1XOyPQ69.WEJ0mePvCLVxkiAdermGICCtF5fu6c.\', 2, 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (\'Sabrina Guadalupe\', \'Montiel\', \'03795012333\', \'$2y$10$Xna67pBWbeO5f1XOyPQ69.WEJ0mePvCLVxkiAdermGICCtF5fu6c.\', 2, 1)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre_usuario`, `apellido_usuario`, `telefono_usuario`, `contrasenia_usuario`, `id_perfil`, `estado_usuario`) VALUES (:nombre_usuario:, :apellido_usuario:, :telefono_usuario:, :contrasenia_usuario:, :id_perfil:, :estado_usuario:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Usuarios_Controller.php(72): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Usuarios_controller->add_cliente()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios_controller))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+>>>>>>> 692ad0deadb2163e9aeef53c177941929caaa0bb

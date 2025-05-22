@@ -23,7 +23,7 @@ $validation->setRules(
     [   // Errors
         'nombre' => [
             'required' => 'El nombre es requerido',
-            'max_length' => 'El motivo de la consulta debe tener como máximo 150 caracteres'
+            'max_length' => 'El nombre debe tener como máximo 150 caracteres'
         ],
 
          'email' => [
