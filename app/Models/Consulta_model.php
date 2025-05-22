@@ -14,7 +14,7 @@ class Consulta_model extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nombre_mensaje', 'correo_mensaje' , 'motivo_mensaje' , 'texto_mensaje'];
+    protected $allowedFields = ['nombre_mensaje', 'correo_mensaje' , 'telefono_mensaje' , 'texto_mensaje'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

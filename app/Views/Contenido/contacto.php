@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/estilo_contacto.css') ?>">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <div class="container py-5">
   <div class="row">
@@ -14,7 +15,11 @@
       
     </div>
 
-    <?php if (!empty ($validation)): ?>
+   
+
+    <div class="col-md-6">
+
+       <?php if (!empty ($validation)): ?>
         <div class= "alert alert-danger" role ="alert">
           <ul>
             <?php foreach ($validation as $error): ?>
@@ -22,14 +27,8 @@
               <?php endforeach ?>
           </ul>
           </div>
-    <?php endif ?>
-
-    <?php if (session ('texto_mensaje')){
-        echo session ('texto_mensaje');
-    } ?>
-
-
-    <div class="col-md-6">
+      <?php endif ?>
+      
       <div class="contact-form mt-5">
         <?php echo form_open ('consulta') ?>
           <label for='nombre' class="form-label">Nombre Completo:</label>
@@ -50,8 +49,20 @@
          
       </div>
     </div>
+
+     <!-- SweetAlert2 -->
+      <?php if (session()->getFlashdata('texto_mensaje')): ?>
+      <script>
+        Swal.fire({
+          title: '¡Buen trabajo!',
+          text: '<?= session()->getFlashdata('texto_mensaje') ?>',
+          icon: 'success',
+          confirmButtonText: 'Aceptar'
+        });
+      </script>
+      <?php endif; ?>
+   </div>
   </div>
-</div>
 
 <div class="mapa-full">
   <div class="map-responsive">
