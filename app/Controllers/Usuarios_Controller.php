@@ -8,14 +8,14 @@ class Usuarios_controller extends BaseController
 {
     public function add_cliente(){
 
-$validation = \Config\Services::validation();
-$request = \Config\Services::request();
+    $validation = \Config\Services::validation();
+    $request = \Config\Services::request();
 
-$validation->setRules(
+    $validation->setRules(
     [
         'nombre' => 'required|max_length[150]',
         'apellido' => 'required|max_length[150]',
-        'email' => 'required|valid_email',
+        'email' => 'required|valid_email|is_unique[usuarios.mail_usuario]',
         'telefono' => 'required|max_length[15]|min_length[7]',
         'password'=> 'required|min_length[8]',
         'confirmPassword'=> 'required|min_length[8]|matches[password]',
@@ -34,7 +34,8 @@ $validation->setRules(
         ],
          'email' => [
             'required' => 'El correo electrónico es obligatorio',
-            'valid_email' => 'La dirección de correo debe ser válida'
+            'valid_email' => 'La dirección de correo debe ser válida',
+            'is_unique'=> 'El usuario ya se encuentra registrado'
                 ],
 
           'telefono'   => [
@@ -76,6 +77,67 @@ if ($validation->withRequest($request)->run() ){
                 $data['validation'] = $validation->getErrors();
                 return view('Plantilla/header_view', $data).view('Plantilla/nav_view').view('Contenido/Registrar.php').view('Plantilla/footer_view.php');
             }
-}
+    }
+
+    public function buscar_usuario(){
+        $validation = \Config\Services::validation();
+        $request = \Config\Services::request();
+        $session = session();
+
+         $validation->setRules(
+            [
+            'email' => 'required|valid_email',
+            'password'=> 'required|min_length[8]',
+            ]
+
+            'email' => [
+                'required' => 'El correo electrónico es obligatorio',
+                'valid_email' => 'La dirección de correo debe ser válida'
+            ],
+
+            'password' => [
+            'required' => 'La contraseña es requerida',
+            'min_length'    => 'La contraseña debe tener un minimo de 8 caracteres'
+            ]
+            );
+
+        if($validation-> withRequest($request)->run())
+        {
+            $data['titulo'] = 'Login';
+            $data ['validation'] =$validation->getErrors();
+             return view('Plantilla/header_view', $data).view('Plantilla/nav_view').view('Contenido/Login.php').view('Plantilla/footer_view.php');
+        }
+
+        $email = $request->getPost('email');
+        $password =$request->getPost('password');
+
+        $userModel = new Usuarios_model();
+        $user =$userModel->where('mail_usuario',$email)->first();
+
+        if ($user && password_verify($password, $user['contrasenia_usuario']))
+        {
+            $data =[
+                'id'=>$user['id_usuario'],
+                'nombre'=> $user['nombre_usuario'],
+                'apellido'=>$user['apellido_usuario'],
+                'perfil'=>$user['id_perfil'],
+                'login'=> TRUE
+            ];
+
+            $session->set($data);
+
+            switch ($user['id_perfil'])
+            {
+                case '1':
+                    return redirect()->route('user_admin');
+                    break;
+                
+                case '2':
+                    return redirect()->route('user_cliente');
+                    break;
+            }
+        }
+
+    }
 
 }
