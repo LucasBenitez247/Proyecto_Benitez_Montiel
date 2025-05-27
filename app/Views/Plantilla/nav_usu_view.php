@@ -4,9 +4,6 @@
 
 <link href="assets/js/bootstrap.min.js" rel="stylesheet">
 
-
-
-
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg mt-1">
         <div class="container-fluid">
@@ -22,7 +19,7 @@
                 <a class="nav-link active" aria-current="page" href="<?php echo base_url('/'); ?>">Home</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('consultas'); ?>">Quienes somos</a>
+                <a class="nav-link" href="<?php echo base_url('nosotros'); ?>">Quienes somos</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="<?php echo base_url('comercio'); ?>">Comercialización</a>
@@ -46,38 +43,22 @@
               <li class="nav-item ">
                 <a class="nav-link" href="<?php echo base_url('terminos_usos'); ?>">Terminos y usos</a>
               </li>
-              
-             
-              <li class="nav-item ">
+               <li class="nav-item ">
                <a class="nav-link" href="<?php echo base_url('carrito'); ?>">
                 <span class="d-none d-lg-inline"><i class="fa-solid fa-cart-shopping"></i></span>
-                <span class="d-inline d-lg-none">Carrito</span>
+                <span class="d-inline d-lg-none">Ver Carrito</span>
                </a>
               </li>
-              <?php If (session('login')) { ?>
-
-                <li class="nav-item"><a class="nav-link" href="<?php echo base_url('carrito'); ?>">Ver carrito</a></li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><?php echo session('apellido'); ?></a>
-                </li>
-
-              <li class="nav-item">
+              <li class="nav-item ">
+                <a class="nav-link" href="<?php echo base_url('terminos_usos'); ?>">nombre</a>
+              </li>
+             <li class="nav-item ">
                 <a class="nav-link" href="<?php echo base_url('/'); ?>">
                 <span class="d-none d-lg-inline"><i class="fa-solid fa-right-from-bracket"></i></span>
-                <span class="d-inline d-lg-none">Salir</span>
+                <span class="d-inline d-lg-none">Salir</span>   
               </li>
+             
 
-              <?php } else { ?>
-
-                <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('login'); ?>">
-                <span class="d-none d-lg-inline"><i class="fa-solid fa-user"></i></span>
-                <span class="d-inline d-lg-none">Iniciar Sesión</span>
-                </a>
-              </li>
-
-            <?php } ?>
             </ul>
           </div>
         </div>

@@ -28,3 +28,9 @@ $routes->post('verificar_usuario', 'Usuarios_controller::buscar_usuario');
 
 $routes->get('logout', 'Usuarios_controller::cerrar_sesion');
 $routes->post('user_admin', 'Usuarios_controller::admin');
+
+$routes->get('consultas', 'Home::consultas');
+$routes->get('registro_producto', 'Home::registro_producto');
+$routes->get('listar_ventas', 'Home::listar_ventas');
+$routes->get('listar_productos', 'Home::listar_productos');
+$routes->get('gestionar_productos', 'Home::gestionar_productos');

@@ -79,31 +79,34 @@ if ($validation->withRequest($request)->run() ){
             }
     }
 
-   public function buscar_usuario()
-{
+   public function buscar_usuario(){
     $validation = \Config\Services::validation();
     $request = \Config\Services::request();
     $session = session();
 
     // Reglas de validación
-    $rules = [
+    $validation->setRules ( 
+        [
+
+        'email' => 'required|valid_email',
+        'password'=> 'required|min_length[8]',
+         
+    ],
+    [
         'email' => [
-            'rules' => 'required|valid_email',
-            'errors' => [
                 'required' => 'El correo electrónico es obligatorio',
                 'valid_email' => 'La dirección de correo debe ser válida'
-            ]
         ],
         'password' => [
-            'rules' => 'required|min_length[8]',
-            'errors' => [
                 'required' => 'La contraseña es requerida',
                 'min_length' => 'La contraseña debe tener un mínimo de 8 caracteres'
-            ]
         ]
-    ];
+    ]  
+    
+);
 
-    if (! $validation->setRules($rules)->withRequest($request)->run()) {
+    if (!$validation->withRequest($request)->run() ){
+       
         // Si la validación falla, mostrar vista con errores
         $data['titulo'] = 'Login';
         $data['validation'] = $validation->getErrors();
@@ -141,8 +144,9 @@ if ($validation->withRequest($request)->run() ){
         }
     } else {
         // Usuario o contraseña incorrectos
-        return redirect()->route('login_cliente')
-            ->with('mensaje', 'Usuario y/o contraseña incorrectos');
+    
+        return redirect()->route('login')
+        ->with('mensaje', 'Usuario y/o contraseña incorrectos');
     }
 }
 
@@ -155,11 +159,12 @@ if ($validation->withRequest($request)->run() ){
 
         public function admin(){
             $data ['titulo'] = 'index';
-            return view('Plantilla/header_view', $data).view('Plantilla/admin_nav_view').view('Backend/contenido_admin');
+            return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view.php').view('Backend/contenido_admin');
 
         }
 
 
     }
 
-}
+
+

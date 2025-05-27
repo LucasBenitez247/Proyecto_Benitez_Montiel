@@ -12,7 +12,7 @@ class Usuarios_Model extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     protected $allowedFields = ['nombre_usuario', 'apellido_usuario','mail_usuario','telefono_usuario','contrasenia_usuario','id_perfil','estado_usuario'];
 

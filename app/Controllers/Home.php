@@ -63,4 +63,32 @@ class Home extends BaseController
         $data['titulo']="Registrar";
         return view('Plantilla/header_view.php',$data).view('Plantilla/nav_view.php').view('Contenido/Registrar.php').view('Plantilla/footer_view.php');
     }
+
+
+
+     public function consultas(): string 
+    {
+        $data['titulo']="Consultas";
+        return view('Plantilla/header_view.php',$data).view('Plantilla/nav_adm_view.php').view('Backend/Ver_consultas.php').view('Plantilla/footer_view.php');
+    }
+    public function registro_producto(): string 
+    {
+        $data['titulo']="Registrar Productos";
+        return view('Plantilla/header_view.php',$data).view('Plantilla/nav_view.php').view('Backend/Registrar_producto.php').view('Plantilla/footer_view.php');
+    }
+    public function listar_ventas(): string 
+    {
+        $data['titulo']="Ventas";
+        return view('Plantilla/header_view.php',$data).view('Plantilla/nav_adm_view.php').view('Backend/Listar_ventas.php').view('Plantilla/footer_view.php');
+    }
+    public function listar_productos(): string 
+    {
+        $data['titulo']="Listar Productos";
+        return view('Plantilla/header_view.php',$data).view('Plantilla/nav_adm_view.php').view('Backend/Listar_productos.php').view('Plantilla/footer_view.php');
+    }
+    public function gestionar_productos(): string 
+    {
+        $data['titulo']="Gestionar Productos";
+        return view('Plantilla/header_view.php',$data).view('Plantilla/nav_adm_view.php').view('Backend/Gestionar_productos.php').view('Plantilla/footer_view.php');
+    }
 }

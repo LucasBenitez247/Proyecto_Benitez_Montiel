@@ -1,13 +1,7 @@
 <body>
 
 <link href="http://localhost/Proyecto_Benitez_Montiel/assets/css/mi_estilo_nav.css" rel="stylesheet" > 
-
-<link href="assets/js/bootstrap.min.js" rel="stylesheet">
-
-
-
-
-    <div class="container-fluid">
+ <div class="container-fluid">
       <nav class="navbar navbar-expand-lg mt-1">
         <div class="container-fluid">
            <a class="navbar-brand" href="#">
@@ -22,31 +16,26 @@
                 <a class="nav-link active" aria-current="page" href="<?php echo base_url('/'); ?>">Home</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('consultas'); ?>">Quienes somos</a>
+                <a class="nav-link" href="<?php echo base_url('consultas'); ?>">Ver Consultas</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('comercio'); ?>">Comercialización</a>
+                <a class="nav-link" href="<?php echo base_url('listar_productos'); ?>">Listar productos</a>
               </li>
-              <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Productos
+              <li class="nav-item ">
+                <a class="nav-link" href="<?php echo base_url('listar_ventas'); ?>">Listar Ventas</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="<?php echo base_url('registro_producto'); ?>">Registrar Productos</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="<?php echo base_url('gestionar_productos'); ?>">Gestionar Productos</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="<?php echo base_url('login'); ?>">
+                <span class="d-none d-lg-inline"><i class="fa-solid fa-user"></i></span>
+                <span class="d-inline d-lg-none">Iniciar Sesión</span>
                 </a>
-                <ul class="dropdown-menu">
-                  </li>
-                    <li><a class="dropdown-item" href="<?= base_url('productos'); ?>">Todos los Productos</a></li>
-                    <li><a class="dropdown-item" href="<?= base_url('productos/remeras'); ?>">Remeras</a></li>
-                    <li><a class="dropdown-item" href="<?= base_url('productos/gorras'); ?>">Gorras</a></li>
-                    <li><a class="dropdown-item" href="<?= base_url('productos/buzos'); ?>">Buzos</a></li>
-                    <li><a class="dropdown-item" href="<?= base_url('productos/autos'); ?>">Autitos Coleccionables</a></li>
-                </ul>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('contacto'); ?>">Contacto</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('terminos_usos'); ?>">Terminos y usos</a>
-              </li>
-              
              
               <li class="nav-item ">
                <a class="nav-link" href="<?php echo base_url('carrito'); ?>">
@@ -63,19 +52,19 @@
                 </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('/'); ?>">
-                <span class="d-none d-lg-inline"><i class="fa-solid fa-right-from-bracket"></i></span>
-                <span class="d-inline d-lg-none">Salir</span>
+                <a class="nav-link" href="logout" >Salir</a>
               </li>
 
               <?php } else { ?>
 
-                <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('login'); ?>">
-                <span class="d-none d-lg-inline"><i class="fa-solid fa-user"></i></span>
-                <span class="d-inline d-lg-none">Iniciar Sesión</span>
-                </a>
-              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('login'); ?>">Login</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url('registro'); ?>">Registrarse</a>
+                </li>
+                
 
             <?php } ?>
             </ul>

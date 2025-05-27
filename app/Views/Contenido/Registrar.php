@@ -1,4 +1,5 @@
 <link href="<?= base_url('assets/css/mi_estilo_registro.css')?>"  rel="stylesheet" >
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <h1>Registro</h1>
@@ -64,3 +65,4 @@
         });
       </script>
       <?php endif; ?>
+      
