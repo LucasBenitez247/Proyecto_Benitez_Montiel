@@ -22,7 +22,7 @@
                 <a class="nav-link active" aria-current="page" href="<?php echo base_url('/'); ?>">Home</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('consultas'); ?>">Quienes somos</a>
+                <a class="nav-link" href="<?php echo base_url('nosotros'); ?>">Quienes somos</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="<?php echo base_url('comercio'); ?>">Comercialización</a>
@@ -48,22 +48,22 @@
               </li>
               
              
-              <li class="nav-item ">
+              
+              <?php If (session('login')) { ?>
+
+               <li class="nav-item ">
                <a class="nav-link" href="<?php echo base_url('carrito'); ?>">
                 <span class="d-none d-lg-inline"><i class="fa-solid fa-cart-shopping"></i></span>
                 <span class="d-inline d-lg-none">Carrito</span>
                </a>
               </li>
-              <?php If (session('login')) { ?>
-
-                <li class="nav-item"><a class="nav-link" href="<?php echo base_url('carrito'); ?>">Ver carrito</a></li>
 
                 <li class="nav-item">
                   <a class="nav-link" href="#"><?php echo session('apellido'); ?></a>
                 </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('/'); ?>">
+                <a class="nav-link" href="<?php echo base_url('logout'); ?>">
                 <span class="d-none d-lg-inline"><i class="fa-solid fa-right-from-bracket"></i></span>
                 <span class="d-inline d-lg-none">Salir</span>
               </li>

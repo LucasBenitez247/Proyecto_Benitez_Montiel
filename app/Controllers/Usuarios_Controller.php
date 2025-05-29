@@ -151,7 +151,7 @@ if ($validation->withRequest($request)->run() ){
 }
 
 
-        public function cerrar_session(){
+        public function cerrar_sesion(){
             $session = session();
             $session->destroy();
             return  redirect()->route('login_cliente');
@@ -159,7 +159,12 @@ if ($validation->withRequest($request)->run() ){
 
         public function admin(){
             $data ['titulo'] = 'index';
-            return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view.php').view('Backend/contenido_admin');
+            return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view.php').view('Backend/Ver_consultas'). view('Plantilla/footer_view.php');
+
+        }
+        public function login(){
+            $data ['titulo'] = 'index';
+            return view('Plantilla/header_view', $data).view('Plantilla/nav_view.php').view('Contenido/Inicio.php'). view('Plantilla/footer_view.php');
 
         }
 

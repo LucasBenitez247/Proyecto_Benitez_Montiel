@@ -7,6 +7,8 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
+$routes->get('home_adm', 'Home::index_adm');
+
 $routes->get('nosotros', 'Home::somos');
 $routes->get('comercio', 'Home::comercializacion');
 $routes->get('contacto', 'Home::info');
@@ -27,7 +29,7 @@ $routes->get('login_cliente', 'Usuarios_controller::login');
 $routes->post('verificar_usuario', 'Usuarios_controller::buscar_usuario');
 
 $routes->get('logout', 'Usuarios_controller::cerrar_sesion');
-$routes->post('user_admin', 'Usuarios_controller::admin');
+$routes->get('user_admin', 'Usuarios_controller::admin');
 
 $routes->get('consultas', 'Home::consultas');
 $routes->get('registro_producto', 'Home::registro_producto');

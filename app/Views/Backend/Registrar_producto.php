@@ -1,4 +1,4 @@
-<link href="<?= base_url('assets/css/mi_estilo_registrar_producto.css')?>"  rel="stylesheet" >
+<link href="<?= base_url('assets/css/mi_estilo_registrar_producto.css')?>"  rel="stylesheet" >2
 <div class="page-container">
   <div class="form-container">
     <h1>Registro de Producto</h1>

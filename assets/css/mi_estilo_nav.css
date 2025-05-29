@@ -2,6 +2,9 @@
  .navbar {
     border-radius: 150px; /* Ajusta el valor para más o menos redondeo */
   }
+  .navbar-nav{
+    gap: 0 1rem;
+  }
   
   /* Bordes redondeados en los botones del menú */
   .navbar-nav .nav-item .nav-link {
