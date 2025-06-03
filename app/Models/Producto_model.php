@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Consulta_model extends Model
+class Producto_model extends Model
 {
     protected $table      = 'productos';
     protected $primaryKey = 'id_producto';
@@ -14,7 +14,7 @@ class Consulta_model extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nombre_producto', 'precio_producto' , 'estado_producto' , 'stock_producto' , 'categoria_producto'];
+    protected $allowedFields = ['nombre_producto', 'precio_producto' ,'descripcion_producto', 'estado_producto' , 'stock_producto','imagen_producto' , 'categoria_producto'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
