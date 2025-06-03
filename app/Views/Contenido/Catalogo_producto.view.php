@@ -24,7 +24,21 @@
 
             <p class="card-text"><?php echo "Stock: "; echo $row['stock_producto']; ?> </p>
 
+<?php if (session('login')) {
 
+        echo form_open('add_cart');
+
+        echo form_hidden('id', $row['libro_id']);
+        echo form_hidden('titulo', $row['libro_titulo']);
+        echo form_hidden('precio', $row['libro_precio']);
+
+        echo form_submit('comprar', 'Agregar al carrito',"class='btn btn-success'");
+        echo form_close();
+
+} ?>
+
+
+<hr>
         </div>
     </div>
 </div>

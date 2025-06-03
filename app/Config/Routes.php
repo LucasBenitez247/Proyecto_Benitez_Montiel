@@ -39,3 +39,6 @@ $routes->get('gestionar_productos', 'Home::gestionar_productos');
 
 $routes->get('agregar', 'Producto_Controller::form_add_producto');
 $routes->post('registrar_producto', 'Producto_Controller::add_producto');
+
+$routes->get('eliminar/(:num)', 'Producto_Controller::eliminar_producto/$1');
+$routes->get('activar/(:num)', 'Producto_Controller::activar_producto/$1');

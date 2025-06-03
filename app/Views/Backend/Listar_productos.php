@@ -21,6 +21,10 @@
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td><button type="button" class="btn btn-success">Editar</button></td>
+      <td><button type="button" class="btn btn-danger">Eliminar</button></td>
     </tr>
     <tr>
       <th scope="row">2</th>
