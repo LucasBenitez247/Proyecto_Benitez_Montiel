@@ -36,3 +36,6 @@ $routes->get('registro_producto', 'Home::registro_producto');
 $routes->get('listar_ventas', 'Home::listar_ventas');
 $routes->get('listar_productos', 'Home::listar_productos');
 $routes->get('gestionar_productos', 'Home::gestionar_productos');
+
+$routes->get('agregar', 'Producto_Controller::form_add_producto');
+$routes->post('registrar_producto', 'Producto_Controller::add_producto');

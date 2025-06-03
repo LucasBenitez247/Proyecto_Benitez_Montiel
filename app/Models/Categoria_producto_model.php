@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Consulta_model extends Model
+class Categoria_producto_model extends Model
 {
     protected $table      = 'categoria_producto';
     protected $primaryKey = 'id_categoria';
@@ -12,7 +12,7 @@ class Consulta_model extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     protected $allowedFields = ['descripcion_categoria'];
 
