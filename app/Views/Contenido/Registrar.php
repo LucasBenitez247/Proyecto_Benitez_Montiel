@@ -2,9 +2,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<h1>Registro</h1>
-<div class="page-container">
+
+<div class="page-container mt-5">
     <div class="form-container">
+        <h2>Registro</h2>
 
         <?php if (!empty ($validation)): ?>
         <div class= "alert alert-danger" role ="alert">

@@ -66,6 +66,8 @@
                 <a class="nav-link" href="<?php echo base_url('logout'); ?>">
                 <span class="d-none d-lg-inline"><i class="fa-solid fa-right-from-bracket"></i></span>
                 <span class="d-inline d-lg-none">Salir</span>
+                  Salir
+                </a>
               </li>
 
               <?php } else { ?>

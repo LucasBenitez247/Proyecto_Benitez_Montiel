@@ -1,10 +1,11 @@
 <link href="<?= base_url('assets/css/mi_estilo_login.css')?>"  rel="stylesheet" >
-<h1>Login</h1>
 
 
 
-<div class="page-container">
+
+<div class="page-container mt-5">
     <div class="form-container">
+      <h2>Login</h2>
 
     <?php if (!empty ($validation)): ?>
         <div class= "alert alert-danger" role ="alert">
@@ -17,7 +18,7 @@
          <?php endif ?>
 
         <?php echo form_open('verificar_usuario')?>
-            <div class="mb-4">
+            <div class="mb-4 my-4">
                 <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
                 <input name='email' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
