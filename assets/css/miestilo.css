@@ -1,0 +1,142 @@
+ 
+    /* Establecer una altura personalizada para el carrusel */
+  .carousel-item img {
+    height: 600px; /* Ajusta la altura según tu necesidad */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+  }
+
+  /* Asegurarse de que el carrusel no se estire en la altura */
+  .carousel-inner {
+    height: 600px; /* Ajusta la altura aquí para mantener consistencia */
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #ff0707ad; /* rojo con transparencia */
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: #9e0000; /* rojo sólido al hacer hover */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+  }
+  
+
+  .texto-gris {
+    color: rgb(182, 182, 182); /* Cambia el color a rojo */
+  }
+
+  .footer-list {
+    color: aliceblue;
+    list-style: none; /* Opcional: para sacar los puntitos */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espacio entre los elementos */
+  }
+  .footer-list a {
+    text-decoration: none;
+    color: white; /* también podés definir el color acá si los <a> están dentro del <li> */
+  }
+  
+ 
+  .slider {
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+  }
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: max-content; /*  Se ajusta automáticamente al contenido */
+}
+
+.slider .slide {
+  width: 15vw;      
+  height: 15vw;     
+  display: flex; /*  Flex para centrar */
+  align-items: center; /*  Centrado vertical */
+  justify-content: center; /*  Centrado horizontal */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slider .slide img {
+  max-height: 100%; /*  Que no se pase del alto del contenedor */
+  max-width: 100%;
+  object-fit: contain;
+}
+.slide img {
+  max-height: 100%;  /* Se adapta a la altura del contenedor */
+  max-width: 100%;
+  object-fit: contain;  /* Evita deformaciones */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+.custom-card {
+  cursor: pointer;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px); 
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.custom-card:hover {
+  border: 1px solid rgba(34, 28, 87, 0.4); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 350px;
+  object-fit: cover;
+}
+.custom-card .btn {
+  background-color: #1100ffb9; 
+  border-color: #1100ffb9; 
+  color: white;
+}
+
+.custom-card .btn:hover {
+  background-color: #1100ff; 
+  border-color: #1100ff;
+  color: #fff; 
+}
+
+.titulo{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 46px;
+  margin-bottom: 30px; 
+  border-bottom: 2px solid #001b5ec4;
+  display: inline-block;
+}
+

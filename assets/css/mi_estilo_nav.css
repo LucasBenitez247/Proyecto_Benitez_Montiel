@@ -1,0 +1,87 @@
+ /* Bordes redondeados en los elementos del menú */
+ .navbar {
+    border-radius: 150px; /* Ajusta el valor para más o menos redondeo */
+  }
+  .navbar-nav{
+    gap: 0 1rem;
+  }
+  
+  /* Bordes redondeados en los botones del menú */
+  .navbar-nav .nav-item .nav-link {
+    border-radius: 10px; /* Ajusta el valor para más o menos redondeo */
+  }
+  
+  /* Estilo del dropdown */
+  .dropdown-menu {
+    border-radius: 10px; /* Bordes redondeados en el menú desplegable */
+  }
+
+  /* Opcional: Bordes redondeados en el contenedor del botón toggler */
+  .navbar-toggler {
+    border-radius: 50px; /* Bordes circulares para el botón de menú móvil */
+  }
+  .navbar {
+     border: 2px solid #720606; /* Bordes azul marino */
+  }
+  .nav-effect {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  
+  .nav-effect:before {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: #ff07075b;
+    right: 0;
+    z-index: 0;
+    top: 33.33%;
+    transition: all 0.5s;
+    
+  }
+  
+  .nav-effect:after {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: #ff07075b;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    transition: all 0.5s;
+   
+  }
+  
+  .nav-effect a {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .nav-effect a:before {
+    position: absolute;
+    content: "";
+    height: 33.33%;
+    width: 0;
+    background-color: #ff07075b;
+    bottom: 66.66%;
+    left: 0;
+    transition: all 0.5s;
+    z-index: 0;
+     
+  }
+  
+  .nav-effect:hover:before,
+  .nav-effect:hover:after,
+  .nav-effect:hover a:before {
+    width: 100%;
+  }
+  @media (max-width: 991.98px) {
+    .navbar {
+      border: none !important;
+    }
+  }
+  
