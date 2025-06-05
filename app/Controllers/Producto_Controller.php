@@ -71,8 +71,8 @@ class Producto_Controller extends BaseController
         
         $data =[
             'nombre_producto'=>$request->getpost('nombre'),
-            'precio_producto'=>$request->getpost('precio') , 
             'descripcion_producto'=>$request->getpost('descripcion') ,
+            'precio_producto'=>$request->getpost('precio') , 
             'estado_producto'=> 1 ,
             'imagen_producto'=>$nombre_aleatorio, 
             'stock_producto' =>$request->getpost('stock'), 
@@ -91,13 +91,15 @@ class Producto_Controller extends BaseController
         return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/Registrar_producto.php', $data).view('Plantilla/footer_view.php', $data);
     }
  }
-    function gestionar_productos(){
+    function listar_productos(){
         $producto_model = new Producto_model();
-        $categorias = new Categorias_producto_model();
+        $categorias = new Categoria_producto_model();
 
-        $data['productos'] = $producto_model->findAll();
+        $data['productos']=$producto_model
+        ->select('productos.*, categoria_producto.nombre_categoria')
+        ->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')
+        ->findAll();
 
-        $data['productos']=$producto_model->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')->findAll();
         $data['titulo']='Listar Productos';
 
         return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/Listar_productos.php', $data).view('Plantilla/footer_view.php', $data);
@@ -190,7 +192,7 @@ class Producto_Controller extends BaseController
     }
 
     public function eliminar_producto($id = null) {
-    $data = ['estado_producto' => 0];
+    $data = ['estado_producto' => '0'];
     $productos = new Producto_model();
     $productos->update($id, $data);
 
@@ -198,7 +200,7 @@ class Producto_Controller extends BaseController
     }
 
     public function activar_producto($id = null) {
-    $data = ['estado_producto' => 1];
+    $data = ['estado_producto' => '1'];
     $productos = new Producto_model();
     $productos->update($id, $data);
 

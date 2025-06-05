@@ -30,12 +30,17 @@
         <?php echo form_input(['name'=>'stock', 'id'=>'stock', 'type'=>'number', 'class'=>'form-control no-arrow',  'autofocus'=>'autofocus', 'value'=>$productos['stock_producto']]);?>
       </div>
       
-      <?php foreach($categorias as $categoria): ?>
-       <option value="<?= $categoria['id_categoria'] ?>" 
-        <?= $categoria['id_categoria'] == $productos['categoria_producto'] ? 'selected' : '' ?>>
-        <?= $categoria['nombre_categoria'] ?>
-      </option>
-<?php endforeach; ?>
+      <div class="form-group mb-3">
+        <label for="categoria" class="form-label">Categoría</label>
+        <select name="categoria" id="categoria" class="form-select">
+          <?php foreach($categorias as $categoria): ?>
+            <option value="<?= $categoria['id_categoria'] ?>" 
+              <?= $categoria['id_categoria'] == $productos['categoria_producto'] ? 'selected' : '' ?>>
+              <?= $categoria['nombre_categoria'] ?>
+            </option>
+          <?php endforeach; ?>
+        </select>
+      </div>
 
     <div class="form-goup mb-3">
       <?php echo form_submit('gestionar', "Modificar", "class='btn btn-primary w-100 mt-3'"); ?>

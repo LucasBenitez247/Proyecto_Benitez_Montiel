@@ -35,12 +35,12 @@ $routes->get('consultas', 'Home::consultas');
 $routes->get('registro_producto', 'Home::registro_producto');
 $routes->get('listar_ventas', 'Home::listar_ventas');
 $routes->get('listar_productos', 'Home::listar_productos');
-$routes->get('gestionar_productos', 'Home::gestionar_productos');
+//$routes->get('gestionar_productos', 'Home::gestionar_productos');
 
 $routes->get('agregar', 'Producto_Controller::form_add_producto');
 $routes->post('registrar_producto', 'Producto_Controller::add_producto');
 
-$routes->get('gestionar', 'Producto_Controller::gestionar_producto');
+$routes->get('listar', 'Producto_Controller::listar_productos');
 $routes->get('editar/(:num)', 'Producto_Controller::editar_producto/$1');
 $routes->post('actualizar', 'Producto_Controller::actualizar_producto');
 

@@ -14,7 +14,7 @@ class Categoria_producto_model extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['descripcion_categoria'];
+    protected $allowedFields = ['descripcion_categoria','nombre_categoria'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

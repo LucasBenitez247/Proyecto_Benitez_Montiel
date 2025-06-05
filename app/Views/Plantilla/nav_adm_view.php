@@ -16,7 +16,7 @@
                 <a class="nav-link" href="<?php echo base_url('consultas'); ?>">Ver Consultas</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('listar_productos'); ?>">Listar productos</a>
+                <a class="nav-link" href="<?php echo base_url('listar'); ?>">Listar productos</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="<?php echo base_url('listar_ventas'); ?>">Listar Ventas</a>
@@ -25,7 +25,7 @@
                 <a class="nav-link" href="<?php echo base_url('registro_producto'); ?>">Registrar Productos</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('gestionar_productos'); ?>">Gestionar Productos</a>
+                <a class="nav-link" href="<?php echo base_url('gestionar'); ?>">Gestionar Productos</a>
               </li>
               
               <?php If (session('login')) { ?>
