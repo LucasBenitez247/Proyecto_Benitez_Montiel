@@ -1,42 +1,52 @@
-<h1>
-    Listado de Productos
-</h1>
+<link href="<?= base_url('assets/css/mi_estilo_listar_productos.css') ?>" rel="stylesheet">
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Descripción</th>
-      <th scope="col">stock</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Categoria</th>
-      <th scope="col">Imagen</th>
-      <th scope="col">Editar</th>
-      <th scope="col">Activar/Eliminar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td><button type="button" class="btn btn-success">Editar</button></td>
-      <td><button type="button" class="btn btn-danger">Eliminar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>John</td>
-      <td>Doe</td>
-      <td>@social</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container mt-5">
+    <h1 class="mb-4">Listado de Productos</h1>
+
+    <?php if (session()->getFlashdata('mensaje')): ?>
+        <div class="alert alert-success"><?= session()->getFlashdata('mensaje') ?></div>
+    <?php endif; ?>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Stock</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Imagen</th>
+                <th>Editar</th>
+                <th>Activar/Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if (!empty($productos)): ?>
+                <?php foreach ($productos as $producto): ?>
+                    <tr>
+                        <td><?= esc($producto['nombre_producto']) ?></td>
+                        <td><?= esc($producto['descripcion_producto']) ?></td>
+                        <td><?= esc($producto['stock_producto']) ?></td>
+                        <td>$<?= esc($producto['precio_producto']) ?></td>
+                        <td><?= esc($producto['nombre_categoria']) ?></td>
+                        <td>
+                            <img src="<?= base_url('assets/uploads/' . $producto['imagen_producto']) ?>" alt="Imagen" width="80">
+                        </td>
+                        <td>
+                            <a href="<?= base_url('editar/' . $producto['id_producto']) ?>" class="btn btn-success">Editar</a>
+                        </td>
+                        <td>
+                            <?php if ($producto['estado_producto'] == 1): ?>
+                                <a href="<?= base_url('eliminar/' . $producto['id_producto']) ?>" class="btn btn-danger">Eliminar</a>
+                            <?php else: ?>
+                                <a href="<?= base_url('activar/' . $producto['id_producto']) ?>" class="btn btn-primary">Activar</a>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr><td colspan="8" class="text-center">No hay productos cargados</td></tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</div>
