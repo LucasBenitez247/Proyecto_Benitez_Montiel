@@ -194,7 +194,7 @@ class Producto_Controller extends BaseController
         $productos =new Producto_model();
         $productos->update($id,$data);
 
-        return redirect()->route('gestionar')->with('mensaje','El producto se modificó correctamente');
+        return redirect()->route('gestionar_producto')->with('mensaje','El producto se modificó correctamente');
     }
 
     public function eliminar_producto($id = null) {
