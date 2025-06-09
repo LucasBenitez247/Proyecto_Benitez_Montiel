@@ -1,50 +1,52 @@
-<link href="<?= base_url('assets/css/mi_estilo_registrar_producto.css')?>"  rel="stylesheet" >
-<div class="page-container">
-  <div class="form-container mt-5">
-    <h1>Edición de Productos</h1>
+<link href="<?= base_url('assets/css/mi_estilo_listar_productos.css') ?>" rel="stylesheet">
 
+<div class="container mt-5">
+    <h1 class="mb-4">Listado de Productos</h1>
 
-    <?php echo form_open_multipart("Producto_Controller/actualizar_producto");?>
-    <?= form_hidden('id', $productos['id_producto'] ?? '') ?>
-      <div class="form-group mb-3">
-        <label for="nombre" class="form-label">Título del producto</label>
-        <?php echo form_input(['name'=>'nombre','id'=>'nombre', 'type'=>'text', 'class'=>'form-control', 'autofocus'=>'autofocus', 'value'=>$productos['nombre_producto']]);?>
-      </div>
-      <div class="form-group mb-3">
-        <label for="precio" class="form-label">Precio</label>
-        <?php echo form_input(['name'=>'precio', 'id'=>'precio', 'type'=>'number', 'class'=>'form-control no-arrow', 'autofocus'=>'autofocus', 'value'=>$productos['precio_producto']]);?>
-      </div>
-<div class="form-group mb-3">
-        <label for="descripcion" class="form-label">Descripción</label>
-        <?php echo form_input(['name'=>'descripcion','id'=>'descripcion', 'type'=>'text', 'class'=>'form-control', 'autofocus'=>'autofocus', 'value'=>$productos['descripcion_producto']]);?>
-      </div>
-      <div class="form-group mb-3">
-        <label for="imagen">Imagen</label>
-        <img src="<?php echo base_url('assets/uploads/'.$productos['imagen_producto']);?>" alt="" 
-        height= "100" width= "100" />
-        <?php echo form_input(['name'=>'imagen', 'id'=>'imagen', 'type'=>'file']); ?>
-      </div>
+    <?php if (session()->getFlashdata('mensaje')): ?>
+        <div class="alert alert-success"><?= session()->getFlashdata('mensaje') ?></div>
+    <?php endif; ?>
 
-      <div class="form-group mb-3">
-        <label for="stock" class="form-label">Stock</label>
-        <?php echo form_input(['name'=>'stock', 'id'=>'stock', 'type'=>'number', 'class'=>'form-control no-arrow',  'autofocus'=>'autofocus', 'value'=>$productos['stock_producto']]);?>
-      </div>
-      
-      <div class="form-group mb-3">
-        <label for="categoria" class="form-label">Categoría</label>
-        <select name="categoria" id="categoria" class="form-select">
-          <?php foreach($categorias as $categoria): ?>
-            <option value="<?= $categoria['id_categoria'] ?>" 
-              <?= $categoria['id_categoria'] == $productos['categoria_producto'] ? 'selected' : '' ?>>
-              <?= $categoria['nombre_categoria'] ?>
-            </option>
-          <?php endforeach; ?>
-        </select>
-      </div>
-
-    <div class="form-goup mb-3">
-      <?php echo form_submit('gestionar', "Modificar", "class='btn btn-primary w-100 mt-3'"); ?>
-    </div>
-    <?php echo form_close();?>
-  </div>
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Stock</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Imagen</th>
+                <th>Editar</th>
+                <th>Activar/Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+                 <?php if (!empty($productos)): ?>
+                <?php foreach ($productos as $producto): ?>
+                    <tr>
+                        <td><?= esc($producto['nombre_producto']) ?></td>
+                        <td><?= esc($producto['descripcion_producto']) ?></td>
+                        <td><?= esc($producto['stock_producto']) ?></td>
+                        <td><?= esc($producto['precio_producto']) ?></td>
+                        <td><?= esc($producto['categoria_producto']) ?></td>
+                        <td>
+                            <img src="<?= base_url('assets/uploads/' . $producto['imagen_producto']) ?>" alt="Imagen" width="80">
+                        </td>
+                         <td>
+                            <a href="<?= base_url('editar/'. $producto['id_producto']) ?>" class="btn btn-success">Editar</a>
+                        </td>
+                          <td>
+                            <?php if ($producto['estado_producto'] == 1): ?>
+                                <a href="<?= base_url('eliminar/'.$producto['id_producto']) ?>" class="btn btn-danger">Eliminar</a>
+                            <?php else: ?>
+                                <a href="<?= base_url('activar/'.$producto['id_producto']) ?>" class="btn btn-primary">Activar</a>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr><td colspan="8" class="text-center">No hay productos cargados</td></tr>
+            <?php endif; ?>
+             </tbody>
+    </table>
 </div>

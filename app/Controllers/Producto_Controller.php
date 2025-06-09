@@ -71,8 +71,8 @@ class Producto_Controller extends BaseController
         
         $data =[
             'nombre_producto'=>$request->getpost('nombre'),
-            'descripcion_producto'=>$request->getpost('descripcion') ,
             'precio_producto'=>$request->getpost('precio') , 
+            'descripcion_producto'=>$request->getpost('descripcion') ,
             'estado_producto'=> 1 ,
             'imagen_producto'=>$nombre_aleatorio, 
             'stock_producto' =>$request->getpost('stock'), 
@@ -91,15 +91,21 @@ class Producto_Controller extends BaseController
         return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/Registrar_producto.php', $data).view('Plantilla/footer_view.php', $data);
     }
  }
-    function listar_productos(){
+    function gestionar_productos(){
         $producto_model = new Producto_model();
         $categorias = new Categoria_producto_model();
 
-        $data['productos']=$producto_model
-        ->select('productos.*, categoria_producto.nombre_categoria')
-        ->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')
-        ->findAll();
+        $data['productos']=$producto_model->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')->findAll();
+        $data['titulo']='Gestionar Productos';
 
+        return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/Gestionar_productos.php', $data).view('Plantilla/footer_view.php', $data);
+    }
+
+     function listar_productos(){
+        $producto_model = new Producto_model();
+        $categorias = new Categoria_producto_model();
+
+        $data['productos']=$producto_model->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')->findAll();
         $data['titulo']='Listar Productos';
 
         return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/Listar_productos.php', $data).view('Plantilla/footer_view.php', $data);
@@ -113,10 +119,10 @@ class Producto_Controller extends BaseController
         $data['productos'] = $producto_model-> where('id_producto',$id)->first();
         $data['titulo']='Edicion de productos';
 
-        return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/Gestionar_productos.php', $data).view('Plantilla/footer_view.php', $data);
+        return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/editar_productos_view.php', $data).view('Plantilla/footer_view.php', $data);
     }
 
-    function actualizar_producto(){
+    public function actualizar_producto($id){
         $validation = \Config\Services::validation();
         $request = \Config\Services::request();
 
@@ -188,23 +194,25 @@ class Producto_Controller extends BaseController
         $productos =new Producto_model();
         $productos->update($id,$data);
 
-        return redirect()->route('actualizar')->with('mensaje','El producto se modificó correctamente');
+        return redirect()->route('gestionar')->with('mensaje','El producto se modificó correctamente');
     }
 
     public function eliminar_producto($id = null) {
-    $data = ['estado_producto' => '0'];
+    $data = ['estado_producto' => 2];
     $productos = new Producto_model();
     $productos->update($id, $data);
 
-    return redirect()->route('eliminar');
+   return redirect()->route('gestionar_producto');
+;
     }
 
     public function activar_producto($id = null) {
-    $data = ['estado_producto' => '1'];
+    $data = ['estado_producto' => 1];
     $productos = new Producto_model();
     $productos->update($id, $data);
 
-    return redirect()->route('activar');
+   return redirect()->route('gestionar_producto');
+;
     }
 
 }
