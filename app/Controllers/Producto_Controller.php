@@ -103,12 +103,12 @@ class Producto_Controller extends BaseController
 
      function listar_productos(){
         $producto_model = new Producto_model();
-        $categorias = new Categoria_producto_model();
 
-        $data['productos']=$producto_model->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')->findAll();
-        $data['titulo']='Listar Productos';
+        $data['productos']=$producto_model->where('estado_producto',1)->where('stock_producto >', 0)
+        ->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')->findAll();
+        $data['titulo']='Catalogo de Productos';
 
-        return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/Listar_productos.php', $data).view('Plantilla/footer_view.php', $data);
+        return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Contenido/Producto.php', $data).view('Plantilla/footer_view.php', $data);
     }
 
     function editar_producto($id=null){
