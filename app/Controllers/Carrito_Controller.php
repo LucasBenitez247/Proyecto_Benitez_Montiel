@@ -11,7 +11,10 @@ class Carrito_Controller extends BaseController{
     public function ver_carrito(){
         $cart = \Config\Services::cart();
         $data['titulo'] = 'Carrito de compras';
-        return view(('Plantilla/header_view', $data).view('Plantilla/nav_usu_view', $data).view('Contenido/carrito_view', $data).view('Plantilla/footer_view.php', $data));
+        return view('Plantilla/header_view', $data)
+        .view('Plantilla/nav_usu_view', $data)
+        .view('Contenido/carrito_view', $data)
+        .view('Plantilla/footer_view.php', $data);
     }
 
     public function agregar_carrito(){
