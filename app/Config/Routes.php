@@ -51,4 +51,4 @@ $routes->get('activar/(:num)', 'Producto_Controller::activar_producto/$1', ['as'
 
 
 $routes->get('ver_carrito', 'Carrito_Controller::ver_carrito');
-$routes->get('add_cart', 'Carrito_Controller::agregar_carrito');
+$routes->post('add_cart', 'Carrito_Controller::agregar_carrito');
