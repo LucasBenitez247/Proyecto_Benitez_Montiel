@@ -39,20 +39,45 @@ class Home extends BaseController
     {
         $data['titulo'] = "Todos los Productos";
         $data['categoria'] = "todos";
+        $producto_model = new \App\Models\Producto_model();
+        $data['productos'] = $producto_model
+        ->where('estado_producto', 1)
+        ->where('stock_producto >', 0)
+        ->findAll();
         return view('Plantilla/header_view.php', $data)
         .view('Plantilla/nav_view.php')
-        . view('Contenido/Producto.php', $data)
+        . view('Contenido/Catalogo_producto.php', $data)
         . view('Plantilla/footer_view.php');
     }
-    public function categoria($nombreCategoria): string 
-    {
-        $data['titulo'] = ucfirst($nombreCategoria);
-        $data['categoria'] = $nombreCategoria;
-        return view('Plantilla/header_view.php', $data)
-        .view('Plantilla/nav_view.php')
-        .view('Contenido/Producto.php', $data)
-        .view('Plantilla/footer_view.php');
+
+public function categoria($nombreCategoria): string 
+{
+    $data['titulo'] = ucfirst($nombreCategoria);
+    $data['categoria'] = $nombreCategoria;
+
+    // Buscar la categoría en la base de datos
+    $categoria_model = new \App\Models\Categoria_producto_model();
+    $categoria = $categoria_model->where('nombre_categoria', $nombreCategoria)->first();
+
+    $producto_model = new \App\Models\Producto_model();
+
+    if ($categoria) {
+        // Si existe la categoría, filtra los productos por esa categoría
+        $data['productos'] = $producto_model
+            ->where('estado_producto', 1)
+            ->where('stock_producto >', 0)
+            ->where('categoria_producto', $categoria['id_categoria'])
+            ->findAll();
+    } else {
+        // Si no existe la categoría, no muestra productos
+        $data['productos'] = [];
     }
+
+    return view('Plantilla/header_view.php', $data)
+        .view('Plantilla/nav_view.php')
+        .view('Contenido/Catalogo_producto.php', $data)
+        .view('Plantilla/footer_view.php');
+}
     public function login(): string 
     {
         $data['titulo']="Login";

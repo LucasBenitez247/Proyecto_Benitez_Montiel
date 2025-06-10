@@ -4,7 +4,7 @@
 
         <div class="row">
 
-        <?php foreach($producto as $row) { ?>
+        <?php foreach($productos as $row) { ?>
 
             <div class="col-md-4">
 
