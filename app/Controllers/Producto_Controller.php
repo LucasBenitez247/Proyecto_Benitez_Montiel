@@ -101,6 +101,17 @@ class Producto_Controller extends BaseController
         return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/Gestionar_productos.php', $data).view('Plantilla/footer_view.php', $data);
     }
 
+    function listado_productos(){
+        $producto_model = new Producto_model();
+        $categorias = new Categoria_producto_model();
+
+        $data['productos']=$producto_model->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')->findAll();
+        $data['titulo']='Listar Productos';
+
+        return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/listar_productos.php', $data).view('Plantilla/footer_view.php', $data);
+    }
+
+
      function listar_productos(){
         $producto_model = new Producto_model();
 
