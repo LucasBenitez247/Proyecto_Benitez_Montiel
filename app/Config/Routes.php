@@ -51,9 +51,11 @@ $routes->post('actualizar/(:num)', 'Producto_Controller::actualizar_producto/$1'
 $routes->get('eliminar/(:num)', 'Producto_Controller::eliminar_producto/$1', ['as' => 'eliminar']);
 $routes->get('activar/(:num)', 'Producto_Controller::activar_producto/$1', ['as' => 'activar']);
 
-
 $routes->get('ver_carrito', 'Carrito_Controller::ver_carrito');
 $routes->post('add_cart', 'Carrito_Controller::agregar_carrito');
 
-$routes->post('procesar_checkout', 'Carrito_controller::procesar_checkout');
-$routes->get('ventas', 'Carrito_Controller::ventas');
+$routes->get('eliminar_item/(:any)', 'Carrito_Controller::borrar/$1');
+$routes->get('vaciar_carrito/(:any)', 'Carrito_Controller::borrar/$1');
+
+$routes->post('guardar_venta', 'Carrito_controller::guardar_venta');
+$routes->get('ventas', 'Carrito_Controller::procesar_checkout');

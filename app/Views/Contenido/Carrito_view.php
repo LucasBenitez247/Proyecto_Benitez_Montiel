@@ -1,8 +1,10 @@
 <link href="<?= base_url('assets/css/miestilo_popup.css')?>" rel="stylesheet" >
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 <?php  $cart = \Config\Services::cart();?>
 
-<h1 class= "tex-center">Carrito de Compras</h1><a href="productos"
-class= "btn btn-succes" role="button">Continuar Comprando</a>
+<h1 class= "tex-center">Carrito de Compras</h1>
+<a href="<?php echo base_url('productos'); ?>" class="btn btn-secondary">Continuar Comprando</a>
 
 <?php if($cart->contents() == NULL): ?>
     <h2 class="text-center alert alert-danger">El carrito está vacío</h2>
@@ -17,6 +19,7 @@ class= "btn btn-succes" role="button">Continuar Comprando</a>
             <td>Acción</td>
         </thead>
         <tbody>
+
             <?php
             $total = 0;
             $i = 1;
@@ -45,13 +48,31 @@ class= "btn btn-succes" role="button">Continuar Comprando</a>
                 </div>
             </div>
             </div>
+ <?php if (session()->getFlashdata('mensaje')): ?>
+        <!-- Modal Bootstrap -->
+<div class="modal fade" id="modalCompraExitosa" tabindex="-1" aria-labelledby="modalCompraExitosaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="modalCompraExitosaLabel">¡se agrego al carrito!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <?= session()->getFlashdata('mensaje') ?>
+      </div>
 
+      <div class="modal-footer">
+        <a href="<?= base_url('productos') ?>" class="btn btn-success">Seguir comprando</a>
+      </div>
+    </div>
+  </div>
+</div>
+<?php endif; ?>
         <script>
+            
             function abrirPopup() {
                 document.getElementById("popup").style.display = "flex";
             }
-
-            // Cerrar el popup si se hace clic fuera del contenido
             window.onclick = function(e) {
             var popup = document.getElementById("popup");
             if (e.target == popup) {
@@ -59,6 +80,15 @@ class= "btn btn-succes" role="button">Continuar Comprando</a>
             }
         }
         </script>
+
+ <?php if (session()->getFlashdata('mensaje')): ?>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modal = new bootstrap.Modal(document.getElementById('modalCompraExitosa'));
+        modal.show();
+    });
+</script>
+<?php endif; ?>
 
         </tbody>
     </table>

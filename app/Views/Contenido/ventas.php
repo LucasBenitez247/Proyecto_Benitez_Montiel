@@ -3,7 +3,7 @@
 <h1 class="text-center mb-4">Finalizar Compra</h1>
 
 <div class="container">
-    <form method="post" action="<?= base_url('procesar_checkout') ?>">
+    <form method="post" action="<?= base_url('guardar_venta') ?>">
       
     <?php if (!empty($validation)): ?>
     <div class="alert alert-danger">
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label>Email</label>
-                        <input type="email" name="email" class="form-control" value="<?= esc(session()->get('email')) ?>" readonly>
+                        <input type="email" name="email" class="form-control" value="<?= esc(session()->get('email')) ?>" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label>Teléfono</label>
@@ -85,11 +85,28 @@
             </div>
         </div>
 
+     <div class="card mb-4">
+    <div class="card-header">Resumen de compra</div>
+    <div class="card-body">
+        <?php $cart = \Config\Services::cart(); ?>
+        <ul class="list-group">
+            <?php foreach ($cart->contents() as $item): ?>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <?= $item['name'] ?> x<?= $item['qty'] ?>
+                    <span>$<?= number_format($item['price'] * $item['qty'], 2) ?></span>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <hr>
+        <h5 class="text-end">Total: $<?= number_format($cart->total(), 2) ?></h5>
+    </div>
+</div>
+
         
-        <div class="text-center mb-5">
-            <button type="submit" class="btn btn-primary btn-lg">Finalizar Compra</button>
-        </div>
-    </form>
+       <div class="text-center mb-5">
+         <button type="submit" class="btn btn-success">Finalizar Compra</button>
+    </div>
+
 </div>
 
 <script>
