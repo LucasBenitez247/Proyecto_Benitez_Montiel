@@ -41,4 +41,13 @@ class Carrito_Controller extends BaseController{
         return redirect()->route('ver_carrito');
     }
 
+       public function ventas() {  
+        return view('Plantilla/header_view')
+         .view('Plantilla/nav_usu_view')
+         .view('Contenido/ventas')
+         .view('Plantilla/footer_view');
+        }
+
+    
+
 }
