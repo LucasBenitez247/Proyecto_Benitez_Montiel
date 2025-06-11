@@ -1,3 +1,4 @@
+<link href="<?= base_url('assets/css/miestilo_popup.css')?>" rel="stylesheet" >
 <?php  $cart = \Config\Services::cart();?>
 
 <h1 class= "tex-center">Carrito de Compras</h1><a href="productos"
@@ -33,8 +34,32 @@ class= "btn btn-succes" role="button">Continuar Comprando</a>
             <tr>
                 <td>Total Compra: $<?php echo $total;?></td>
                 <td><a href="<?php echo base_url('vaciar_carrito/all');?>" class="btn btn-success">Vaciar Carrito</a></td>
-                <td><a href="ventas" class="btn btn-success" role="button">Ordenar Compra</a></td>
+               <td><button class="btn btn-success" onclick="abrirPopup()">Ordenar Compra</button></td>
             </tr>
+            <div id="popup" class="popup">
+            <div class="popup-content">
+                <h3>¿Qué querés hacer?</h3>
+                <div class="popup-buttons">
+                <a href="<?php echo base_url('productos'); ?>" class="btn btn-secondary">Seguir Comprando</a>
+                <a href="<?php echo base_url('ventas'); ?>" class="btn btn-success">Finalizar Compra</a>
+                </div>
+            </div>
+            </div>
+
+        <script>
+            function abrirPopup() {
+                document.getElementById("popup").style.display = "flex";
+            }
+
+            // Cerrar el popup si se hace clic fuera del contenido
+            window.onclick = function(e) {
+            var popup = document.getElementById("popup");
+            if (e.target == popup) {
+            popup.style.display = "none";
+            }
+        }
+        </script>
+
         </tbody>
     </table>
 <?php endif; ?>
