@@ -1,17 +1,19 @@
+<link href="<?= base_url('assets/css/mi_estilo_catalogo.css')?>"  rel="stylesheet" > 
+
 <div class="container">
 
-    <h1 class="display-4 text-center">Lista de productos</h1>
+    <h1 class="display-4 text-center mt-3 mb-5">Lista de productos</h1>
 
         <div class="row">
 
         <?php foreach($productos as $row) { ?>
 
-            <div class="col-md-4">
+            <div class="col-sm-6 col-md-3 mb-3">
 
 
-                <div class="card text-center">
+                <div class="card h-100 custom-card text-center">
 
-                    <img class="card-img-top" src="<?php echo base_url('assets/uploads/'. $row['imagen_producto']); ?>" width=150 height=150 alt="Cardimage cap">
+                    <img class="card-img-top" src="<?php echo base_url('assets/uploads/'. $row['imagen_producto']); ?>"  alt="Cardimage cap">
 
                     <div class="card-body">
 

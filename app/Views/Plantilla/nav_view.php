@@ -52,7 +52,7 @@
               <?php If (session('login')) { ?>
 
                <li class="nav-item ">
-               <a class="nav-link" href="<?php echo base_url('carrito'); ?>">
+               <a class="nav-link" href="<?php echo base_url('ver_carrito'); ?>">
                 <span class="d-none d-lg-inline"><i class="fa-solid fa-cart-shopping"></i></span>
                 <span class="d-inline d-lg-none">Carrito</span>
                </a>
