@@ -3,8 +3,8 @@
 
 <?php  $cart = \Config\Services::cart();?>
 
-<h1 class= "tex-center">Carrito de Compras</h1>
-<a href="<?php echo base_url('productos'); ?>" class="btn btn-secondary">Continuar Comprando</a>
+<h1 class= "mt-3 text-center">Carrito de Compras</h1>
+<a href="<?php echo base_url('productos'); ?>" class="my-3 mx-4 btn btn-outline-success">Continuar Comprando</a>
 
 <?php if($cart->contents() == NULL): ?>
     <h2 class="text-center alert alert-danger">El carrito está vacío</h2>
@@ -31,12 +31,23 @@
                 <td><?php echo $item['price'];?> </td>
                 <td><?php echo $item['qty'];?> </td>
                 <td><?php echo $item['subtotal']; $total += $item['subtotal'];?></td>
-                <td><?php echo anchor('eliminar_item/'.$item['rowid'],'Eliminar') ;?> </td>
+                <td><?php echo anchor(
+                      'eliminar_item/'.$item['rowid'],
+                      '<i class="fa-solid fa-trash"></i> Eliminar',
+                      ['class' => 'btn btn-danger btn-sm']
+                      );?>
+                </td>
             </tr>
             <?php endforeach; ?>
             <tr>
                 <td>Total Compra: $<?php echo $total;?></td>
-                <td><a href="<?php echo base_url('vaciar_carrito/all');?>" class="btn btn-success">Vaciar Carrito</a></td>
+                <td>
+                  <a href="<?php echo base_url('vaciar_carrito/all');?>"
+                  class="btn btn-success">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  Vaciar Carrito
+                </a>
+                </td>
                <td><button class="btn btn-success" onclick="abrirPopup()">Ordenar Compra</button></td>
             </tr>
             <div id="popup" class="popup">
@@ -54,7 +65,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg-success text-white">
-        <h5 class="modal-title" id="modalCompraExitosaLabel">¡se agrego al carrito!</h5>
+        <h5 class="modal-title" id="modalCompraExitosaLabel">¡Se agregó al carrito!</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body">

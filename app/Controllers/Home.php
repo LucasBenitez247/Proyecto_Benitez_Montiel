@@ -86,7 +86,10 @@ public function categoria($nombreCategoria): string
     public function carrito(): string 
     {
         $data['titulo']="Carrito";
-        return view('Plantilla/header_view.php',$data).view('Plantilla/nav_view.php').view('Contenido/Carrito.php').view('Plantilla/footer_view.php');
+        return view('Plantilla/header_view.php',$data)
+        .view('Plantilla/nav_view.php')
+        .view('Contenido/Carrito_view.php')
+        .view('Plantilla/footer_view.php');
     }
     public function registro(): string 
     {

@@ -29,18 +29,17 @@
 
                     <hr>
                   
-                  <?php if (session('login')) {
+                  <?php if (session('login')): ?>
+                        <?= form_open('add_cart'); ?>
+                        <?= form_hidden('id', $row['id_producto']); ?>
+                        <?= form_hidden('titulo', $row['nombre_producto']); ?>
+                        <?= form_hidden('precio', $row['precio_producto']); ?>
 
-                    echo form_open('add_cart');
-
-                    echo form_hidden('id', $row['id_producto']);
-                    echo form_hidden('titulo', $row['nombre_producto']);
-                    echo form_hidden('precio', $row['precio_producto']);
-
-                    echo form_submit('comprar', 'Agregar al carrito',"class='btn btn-success'");
-                    echo form_close();
-
-                  } ?>
+                        <button type="submit" name="comprar" class="btn btn-success">
+                            <i class="fa-solid fa-cart-shopping"></i> Agregar al carrito
+                        </button>
+                        <?= form_close(); ?>
+                    <?php endif; ?>
 
                 </div>
 

@@ -13,7 +13,7 @@ class Carrito_Controller extends BaseController{
         $cart = \Config\Services::cart();
         $data['titulo'] = 'Carrito de compras';
         return view('Plantilla/header_view', $data)
-        .view('Plantilla/nav_usu_view', $data)
+        .view('Plantilla/nav_view.php', $data)
         .view('Contenido/carrito_view', $data)
         .view('Plantilla/footer_view.php', $data);
     }
