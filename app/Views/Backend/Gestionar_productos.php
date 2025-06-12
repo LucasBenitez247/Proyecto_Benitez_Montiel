@@ -1,11 +1,10 @@
 <link href="<?= base_url('assets/css/mi_estilo_listar_productos.css') ?>" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <div class="container mt-5">
     <h1 class="mb-4">Listado de Productos</h1>
 
-    <?php if (session()->getFlashdata('mensaje')): ?>
-        <div class="alert alert-success"><?= session()->getFlashdata('mensaje') ?></div>
-    <?php endif; ?>
+
 
     <table class="table table-bordered table-striped table-hover">
         <thead class="table-dark">
@@ -50,3 +49,12 @@
              </tbody>
     </table>
 </div>
+<?php if (session()->getFlashdata('mensaje')): ?>
+  
+  <script>
+    Swal.fire({
+      title: "<?= session()->getFlashdata('mensaje') ?>",
+      icon: "success"
+    });
+  </script>
+<?php endif; ?>
