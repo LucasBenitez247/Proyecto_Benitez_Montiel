@@ -159,7 +159,7 @@ if ($validation->withRequest($request)->run() ){
 
         public function admin(){
             $data ['titulo'] = 'index';
-            return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view.php').view('Backend/Ver_consultas'). view('Plantilla/footer_view.php');
+            return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view.php').view('Backend/Registrar_producto'). view('Plantilla/footer_view.php');
 
         }
         public function login(){

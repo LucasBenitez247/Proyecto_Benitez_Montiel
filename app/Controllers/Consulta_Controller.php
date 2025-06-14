@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\Consulta_model;
 use App\Models\Usuarios_model;
 
-class Consulta_controller extends BaseController
+class Consulta_Controller extends BaseController
 {
 
 public function add_consulta(){
@@ -68,5 +68,18 @@ if ($validation->withRequest($request)->run() ){
 
                 }
 
+        }
+
+        public function ver_consultas()
+        {
+             
+            $consulta_model = new Consulta_model();
+            $data['consultas'] = $consulta_model->findAll();
+           
+            $data['titulo'] = 'Ver Consultas';
+            return view('Plantilla/header_view', $data)
+                .view('Plantilla/nav_adm_view', $data)
+                .view('Backend/Ver_consultas.php', $data)
+                .view('Plantilla/footer_view.php', $data);
         }
 }

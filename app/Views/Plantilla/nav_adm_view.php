@@ -13,7 +13,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item ">
-                <a class="nav-link" href="<?php echo base_url('consultas'); ?>">Ver Consultas</a>
+                <a class="nav-link" href="<?php echo base_url('ver_consultas'); ?>">Ver Consultas</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="<?php echo base_url('listar'); ?>">Listar productos</a>
