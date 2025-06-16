@@ -1,11 +1,9 @@
 <link href="<?= base_url('assets/css/estilo_checkout.css')?>"  rel="stylesheet" >
 
-<h1 class="text-center mb-4">Finalizar Compra</h1>
-
 <div class="container">
-    <form method="post" action="<?= base_url('guardar_venta') ?>">
-      
-    <?php if (!empty($validation)): ?>
+    <h1 class="display-4 text-center mt-3 mb-5">Finalizar Compra</h1>
+
+ <?php if (!empty($validation)): ?>
     <div class="alert alert-danger">
         <ul>
             <?php foreach ($validation as $error): ?>
@@ -13,10 +11,10 @@
             <?php endforeach; ?>
         </ul>
     </div>
-    <?php endif; ?>
+<?php endif; ?>
 
-        
-        <div class="card mb-4">
+    <form method="post" action="<?= base_url('guardar_venta') ?>">
+      <div class="card mb-4">
             <div class="card-header">Tus datos</div>
             <div class="card-body">
                 <div class="row">
