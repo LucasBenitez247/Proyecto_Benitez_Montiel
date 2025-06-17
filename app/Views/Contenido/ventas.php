@@ -1,24 +1,28 @@
-<link href="<?= base_url('assets/css/estilo_checkout.css')?>"  rel="stylesheet" >
+<link href="<?= base_url('assets/css/estilo_checkout.css')?>" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <div class="container">
     <h1 class="display-4 text-center mt-3 mb-5">Finalizar Compra</h1>
 
- <?php if (!empty($validation)): ?>
-    <div class="alert alert-danger">
-        <ul>
-            <?php foreach ($validation as $error): ?>
-                <li><?= esc($error) ?></li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-<?php endif; ?>
+    <?php if (!empty($validation)): ?>
+        <div class="alert alert-danger">
+            <ul>
+                <?php foreach ($validation as $error): ?>
+                    <li><?= esc($error) ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    <?php endif; ?>
+
 
     <form method="post" action="<?= base_url('guardar_venta') ?>">
-      <div class="card mb-4">
+
+        <div class="card mb-4">
             <div class="card-header">Tus datos</div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-6 mb-3">
+                   <div class="col-md-6 mb-3">
                         <label>Nombre</label>
                         <input type="text" name="nombre" class="form-control" value="<?= esc(session()->get('nombre')) ?>" required>
                     </div>
@@ -34,7 +38,7 @@
                         <label>Teléfono</label>
                         <input type="text" name="telefono" class="form-control" value="<?= esc(session()->get('telefono')) ?>" required>
                     </div>
-                </div>
+            </div>
             </div>
         </div>
 
@@ -65,11 +69,12 @@
                     </div>
                     <div class="mb-3">
                         <label>Código Postal</label>
-                        <input type="text" name="cp" class="form-control">
+                        <input type="text" name="codigo_postal" class="form-control">
                     </div>
                 </div>
-            </div>
         </div>
+        </div>
+    </div>
 
         <div class="card mb-4">
             <div class="card-header">Método de pago</div>
@@ -83,47 +88,70 @@
             </div>
         </div>
 
-     <div class="card mb-4">
-    <div class="card-header">Resumen de compra</div>
-    <div class="card-body">
-        <?php $cart = \Config\Services::cart(); ?>
-        <ul class="list-group">
-            <?php foreach ($cart->contents() as $item): ?>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <?= $item['name'] ?> x<?= $item['qty'] ?>
-                    <span>$<?= number_format($item['price'] * $item['qty'], 2) ?></span>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-        <hr>
-        <h5 class="text-end">Total: $<?= number_format($cart->total(), 2) ?></h5>
-    </div>
-</div>
+        <div class="card mb-4">
+            <div class="card-header">Resumen de compra</div>
+            <div class="card-body">
+                <?php $cart = \Config\Services::cart(); ?>
+                <ul class="list-group">
+                    <?php foreach ($cart->contents() as $item): ?>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <?= $item['name'] ?> x<?= $item['qty'] ?>
+                            <span>$<?= number_format($item['price'] * $item['qty'], 2) ?></span>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <hr>
+                <h5 class="text-end">Total: $<?= number_format($cart->total(), 2) ?></h5>
+            </div>
+        </div>
+
+        <div class="text-center mb-5">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirmarCompraModal">
+                Finalizar Compra
+            </button>
+        </div>
+
+        <div class="modal fade" id="confirmarCompraModal" tabindex="-1" aria-labelledby="confirmarCompraLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmarCompraLabel">¿Confirmar compra?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                   <div class="modal-body">
+                    <p><strong>Nombre:</strong> <?= esc(session()->get('nombre')) ?> <?= esc(session()->get('apellido')) ?></p>
+                    <p><strong>Email:</strong> <?= esc(session()->get('email')) ?></p>
+                    <p><strong>Teléfono:</strong> <?= esc(session()->get('telefono')) ?></p>
+                    <p><strong>Total de la compra:</strong> $<?= number_format($cart->total(), 2) ?></p>
+                    <hr>
+                    <p>¿Estás segura/o de que querés confirmar esta compra?</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success">Sí, comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         
-       <div class="text-center mb-5">
-         <button type="submit" class="btn btn-success">Finalizar Compra</button>
-    </div>
+    </form> 
 
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const envio = document.getElementById('envio');
     const retiro = document.getElementById('retiro');
     const direccion = document.getElementById('direccion-envio');
 
     function toggleDireccion() {
-        if (envio.checked) {
-            direccion.style.display = 'block';
-        } else {
-            direccion.style.display = 'none';
-        }
+        direccion.style.display = envio.checked ? 'block' : 'none';
     }
 
     envio.addEventListener('change', toggleDireccion);
     retiro.addEventListener('change', toggleDireccion);
-
-    toggleDireccion(); 
+    toggleDireccion();
 });
 </script>

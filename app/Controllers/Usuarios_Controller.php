@@ -145,8 +145,12 @@ if ($validation->withRequest($request)->run() ){
     } else {
         // Usuario o contraseña incorrectos
     
-        return redirect()->route('login')
-        ->with('mensaje', 'Usuario y/o contraseña incorrectos');
+       $data['titulo'] = 'Login';
+        $data['validation'] = ['login' => 'Usuario y/o contraseña incorrectos'];
+        return view('Plantilla/header_view', $data)
+            . view('Plantilla/nav_view')
+            . view('Contenido/Login.php')
+            . view('Plantilla/footer_view.php');
     }
 }
 
@@ -159,7 +163,7 @@ if ($validation->withRequest($request)->run() ){
 
         public function admin(){
             $data ['titulo'] = 'index';
-            return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view.php').view('Backend/Ver_consultas'). view('Plantilla/footer_view.php');
+            return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view.php').view('Backend/Registrar_producto'). view('Plantilla/footer_view.php');
 
         }
         public function login(){

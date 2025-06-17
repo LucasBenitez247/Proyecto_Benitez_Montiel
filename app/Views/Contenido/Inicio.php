@@ -57,32 +57,35 @@
   <div class="row justify-content-center">
     <div class="col-md-4 mb-3">
       <div class="card card h-100 custom-card">
+        <a href="<?= base_url('productos/remeras'); ?>" style="text-decoration: none; color: inherit;">
         <img src="<?= base_url('assets/img/reme_ferrari.jpg') ?>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Remeras</h5>
-          <p class="card-text">Color clásico rojo</p>
-          <a href="#" class="btn">Comprar ahora</a>
+          <p class="card-text">Color clásico rojo</p> 
         </div>
+         </a>
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <div class="card card h-100 custom-card">
+        <a href="<?= base_url('productos/buzos'); ?>" style="text-decoration: none; color: inherit;">
         <img src="<?= base_url('assets/img/buzo_aston.jpg') ?>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Buzos</h5>
-          <p class="card-text">Temporada 2025</p>
-          <a href="#" class="btn">Comprar ahora</a>
+          <p class="card-text">Temporada 2025</p>         
         </div>
+        </a>
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <div class="card card h-100 custom-card">
+        <a href="<?= base_url('productos/gorras'); ?>" style="text-decoration: none; color: inherit;">
         <img src="<?= base_url('assets/img/gorra_redbull.png') ?>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Gorras</h5>
-          <p class="card-text">Edición 2025</p>
-          <a href="#" class="btn">Comprar ahora</a>
+          <p class="card-text">Edición 2025</p>         
         </div>
+        </a>
       </div>
     </div>
   </div>

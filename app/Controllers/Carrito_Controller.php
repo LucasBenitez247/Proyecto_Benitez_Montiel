@@ -98,47 +98,52 @@ class Carrito_Controller extends BaseController{
 }
 
 
-    public function guardar_venta(){
-        $cart = \Config\Services::cart();
-        $venta = new Venta_model();
-        $detalle = new Detalle_venta_model();
-        $productos = new Producto_model();
+    public function guardar_venta()
+    {
+    $cart = \Config\Services::cart();
+    $venta = new \App\Models\Venta_model();
+    $detalle = new \App\Models\Detalle_venta_model();
+    $productos_model = new \App\Models\Producto_model();
+    $request = \Config\Services::request();
 
-        $cart1 =$cart->contents();
+    $items = $cart->contents();
 
-        foreach ($cart1 as $item){
-            $productos = $productos->where('id_producto',$item['id'])->first();
-            return redirect()->to('/productos')->with('mensaje', '¡Compra finalizada con éxito!');
-        }
-        
-        $data = array( 
-            'id_cliente'=>session('id'),
-            'venta_fecha'=>date('Y-m-d'),
-        );
-       
-        $venta_id = $venta->insert($data);
-
-        $cart1 =$cart->contents();
-        foreach ($cart1 as $item){
-            $detalle_venta = array(
-                'id_venta' => $venta_id,
-                'id_producto'=> $item['id'],
-                'detalle_cantidad'=> $item['qty'],
-                'detalle_precio'=> $item['price']
-            );
-
-            $productos= $productos->where('id_producto', $item['id'])->first();
-            $data = [
-                'stock_producto'=> $productos['stock_producto'] - $item['qty']
-            ];
-            //Actualiza el stock del libro
-            $productos->update($item['id'],$data);
-            //Inserta detalle de venta
-            $detalle->insert($detalle_venta);
-        }
-
-        $cart->destroy();
-         return redirect()->to('/productos')->with('mensaje', '¡Compra finalizada con éxito!');
-        
+    if (empty($items)) {
+        return redirect()->to('/productos')->with('mensaje', 'El carrito está vacío');
     }
+
+    $total = 0;
+    foreach ($items as $item) {
+        $total += $item['subtotal'];
+    }
+
+    $data_venta = [
+        'id_usuario'    => session('id'), 
+        'fecha_venta'   => date('Y-m-d'),
+        'total_venta'   => $total
+    ];
+
+    $venta_id = $venta->insert($data_venta);
+
+    foreach ($items as $item) {
+        $detalle->insert([
+            'id_venta'        => $venta_id,
+            'id_producto'     => $item['id'],
+            'detalle_cantidad'=> $item['qty'],
+            'detalle_precio'  => $item['price']
+        ]);
+
+        $producto = $productos_model->find($item['id']);
+        if ($producto) {
+            $nuevo_stock = $producto['stock_producto'] - $item['qty'];
+            $productos_model->update($item['id'], ['stock_producto' => $nuevo_stock]);
+        }
+    }
+
+    $cart->destroy();
+
+    return redirect()->to('/productos')->with('mensaje', '¡Compra finalizada con éxito!');
+    }
+
+
 }

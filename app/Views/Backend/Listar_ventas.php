@@ -1,31 +1,32 @@
 <link href="<?= base_url('assets/css/mi_estilo_listar_productos.css') ?>" rel="stylesheet">
 
 <div class="container mt-5">
-    <h1 class="mb-4">Listado de Ventas</h1>
+    <h2><?= esc($titulo) ?></h2>
 
-        <?php if (!empty($ventas)): ?>
-    <table class="table table-bordered table-striped table-hover">
-        <thead class="table-dark">
+    <table class="table table-bordered">
+        <thead>
             <tr>
-                <th>Nombre y Apellido</th>
-                <th>Fecha de Venta</th>
-                <th>Acción</th>
+                <th>Usuario</th>
+                <th>Fecha de venta</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-                 <?php foreach ($ventas as $row):?>
-                    <tr>
-                        <td><?= esc($row['id_venta']) ?></td>
-                        <td><?= esc($row['nombre_usuario'], " ", $row['apellido_usurio']) ?></td>
-                        <td><?= esc($row['fecha_venta']) ?></td>   
-                        <td>
-                            <?php $id = $row['id_venta'];?>
-                            <a class="btn btn-succes" href="<?php echo base_url('ver_detalle/', $id);?> ">Ver detalle completo</a>
-                        </tr>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <tr><td colspan="8" class="text-center">No hay ventas</td></tr>
-            <?php endif; ?>
-             </tbody>
+        <?php if (!empty($ventas)): ?>
+            <?php foreach ($ventas as $row): ?>
+                <tr>
+                    <td><?= esc($row['nombre_usuario'] . ' ' . $row['apellido_usuario']) ?></td>
+                    <td><?= esc($row['fecha_venta']) ?></td>
+                    <td>
+                        <a class="btn btn-success" href="<?= base_url('ver_detalle/' . $row['id_venta']) ?>">Ver detalle completo</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <tr>
+                <td colspan="3">No hay ventas registradas.</td>
+            </tr>
+        <?php endif; ?>
+        </tbody>
     </table>
 </div>

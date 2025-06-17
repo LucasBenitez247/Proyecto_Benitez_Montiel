@@ -60,5 +60,6 @@ $routes->get('vaciar_carrito/(:any)', 'Carrito_Controller::borrar/$1');
 $routes->post('guardar_venta', 'Carrito_controller::guardar_venta');
 $routes->get('ventas', 'Carrito_Controller::procesar_checkout');
 
-$routes->get('ver_ventas', 'Ventas_controller::listar_ventas');
-$routes->get('ver_detalle', 'Ventas_Controller::listar_detalle_ventas');
+$routes->get('ver_consultas', 'Consulta_Controller::ver_consultas');
+
+$routes->get('listar_ventas', 'Ventas_Controller::listar_ventas');

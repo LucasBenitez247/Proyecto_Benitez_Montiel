@@ -1,0 +1,29 @@
+link href="<?= base_url('assets/css/mi_estilo_listar_productos.css') ?>" rel="stylesheet">
+
+<div class="container mt-5" style="max-width: 800px;">
+    <p>Apellido: <?= esc($ventas['apellido_usuario']) ?></p>
+    <p>Nombre: <?= esc($ventas['nombre_usuario']) ?></p>
+    <p>Email: <?= esc($ventas['email_usuario']) ?></p>
+
+    <table id= "mytable"class="table table-bordered table-striped table-hover">
+        <thead>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+        </thead>
+        <tbody>
+                 <?php foreach ($detalle as $row):?>
+                    <tr>
+                        <td><?= esc($row['descripcion']) ?></td>
+                        <td><?= esc($row['precio']) ?></td>
+                        <td><?= esc($row['cantidad']) ?></td>
+
+                        <td>
+                            <?php $id = $row['id_venta'];?>
+                            <a class="btn btn-success" href="<?php echo base_url('ver_detalle/', $id);?> ">Ver detalle completo</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+             </tbody>
+    </table>
+</div>
