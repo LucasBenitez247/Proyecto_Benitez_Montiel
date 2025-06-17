@@ -25,9 +25,9 @@ class Producto_Controller extends BaseController
          
         [
         'nombre' => 'required|max_length[150]',
-        'precio'=> 'required|max_length[150]',
+        'precio'=> 'required|decimal|greater_than[0]|max_length[150]',
         'descripcion'=>'required|max_length[150]',
-        'stock' => 'required|max_length[150]',
+        'stock' => 'required|integer|greater_than_equal_to[0]|max_length[150]',
         'imagen'=> 'uploaded[imagen]|max_size[imagen,4096]|is_image[imagen]',
         'categorias'=> 'is_not_unique[categoria_producto.id_categoria]',
         ],
@@ -39,6 +39,8 @@ class Producto_Controller extends BaseController
        
         'precio'=> [
         'required'=>'el precio es requerido',
+        'decimal'=> 'El precio debe ser un número decimal',
+        'greater_than'=> 'El precio debe ser mayor que 0',
         'max_length'=> 'el precio debe tener como máximo 150 caracteres',
         ],
         'descripcion'=> [
@@ -53,6 +55,8 @@ class Producto_Controller extends BaseController
 
         'stock' =>[ 
             'required'=> 'el stock es requerido',
+            'integer'=> 'El stock debe ser un número entero',
+            'greater_than_equal_to'=> 'El stock debe ser mayor o igual a 0',
             'max_length'=> 'el stock debe tenet como máximo 150 caracteres',
         ],
        
@@ -142,10 +146,10 @@ class Producto_Controller extends BaseController
          
         [
         'nombre' => 'required|max_length[150]',
-        'precio'=> 'required|max_length[150]',
+        'precio'=> 'required|decimal|greater_than[0]|max_length[150]',
         'descripcion'=>'required|max_length[150]',
         'imagen'=> 'uploaded[imagen]|max_size[imagen,4096]|is_image[imagen]',
-        'stock' => 'required|max_length[150]',
+        'stock' => 'required|integer|greater_than_equal_to[0]|max_length[150]',
         'categorias'=> 'is_not_unique[categoria_producto.id_categoria]',
         ],
     [
@@ -156,6 +160,8 @@ class Producto_Controller extends BaseController
        
         'precio'=> [
         'required'=>'el precio es requerido',
+        'decimal'=> 'El precio debe ser un número decimal',
+        'greater_than'=> 'El precio debe ser mayor que 0',
         'max_length'=> 'el precio debe tener como máximo 150 caracteres',
         ],
         'descripcion'=> [
@@ -170,6 +176,8 @@ class Producto_Controller extends BaseController
 
         'stock' =>[ 
             'required'=> 'el stock es requerido',
+            'integer'=> 'El stock debe ser un número entero',
+            'greater_than_equal_to'=> 'El stock debe ser mayor o igual a 0',
             'max_length'=> 'el stock debe tenet como máximo 150 caracteres',
         ],
          

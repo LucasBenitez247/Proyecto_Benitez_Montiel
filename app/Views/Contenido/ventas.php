@@ -5,18 +5,17 @@
 <div class="container">
     <h1 class="display-4 text-center mt-3 mb-5">Finalizar Compra</h1>
 
-    <?php if (!empty($validation)): ?>
-        <div class="alert alert-danger">
-            <ul>
-                <?php foreach ($validation as $error): ?>
-                    <li><?= esc($error) ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    <?php endif; ?>
-
-
     <form method="post" action="<?= base_url('guardar_venta') ?>">
+        <?php if (isset($validation) && !empty(old('nombre','apellido','email','telefono'))): ?>
+
+    <div class="alert alert-danger">
+        <ul>
+            <?php foreach ($validation as $error): ?>
+                <li><?= esc($error) ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+        <?php endif; ?>
 
         <div class="card mb-4">
             <div class="card-header">Tus datos</div>
@@ -38,9 +37,9 @@
                         <label>Teléfono</label>
                         <input type="text" name="telefono" class="form-control" value="<?= esc(session()->get('telefono')) ?>" required>
                     </div>
+                </div>
             </div>
             </div>
-        </div>
 
         <div class="card mb-4">
             <div class="card-header">Método de entrega</div>
@@ -74,7 +73,7 @@
                 </div>
         </div>
         </div>
-    </div>
+
 
         <div class="card mb-4">
             <div class="card-header">Método de pago</div>
@@ -104,6 +103,7 @@
                 <h5 class="text-end">Total: $<?= number_format($cart->total(), 2) ?></h5>
             </div>
         </div>
+        
 
         <div class="text-center mb-5">
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirmarCompraModal">
@@ -111,22 +111,7 @@
             </button>
         </div>
 
-        <div class="modal fade" id="confirmarCompraModal" tabindex="-1" aria-labelledby="confirmarCompraLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="confirmarCompraLabel">¿Confirmar compra?</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                   <div class="modal-body">
-                    <p><strong>Nombre:</strong> <?= esc(session()->get('nombre')) ?> <?= esc(session()->get('apellido')) ?></p>
-                    <p><strong>Email:</strong> <?= esc(session()->get('email')) ?></p>
-                    <p><strong>Teléfono:</strong> <?= esc(session()->get('telefono')) ?></p>
-                    <p><strong>Total de la compra:</strong> $<?= number_format($cart->total(), 2) ?></p>
-                    <hr>
-                    <p>¿Estás segura/o de que querés confirmar esta compra?</p>
-                    </div>
-
+      
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <button type="submit" class="btn btn-success">Sí, comprar</button>

@@ -1,6 +1,5 @@
 <link href="<?= base_url('assets/css/miestilo_popup.css')?>" rel="stylesheet" >
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Bootstrap Bundle JS (incluye Popper) -->
 <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
 <?php  $cart = \Config\Services::cart();?>
 
