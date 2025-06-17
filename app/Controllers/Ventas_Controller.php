@@ -9,7 +9,9 @@ use App\Models\Detalle_venta_model;
 
 class Ventas_Controller extends BaseController{
 
-   public function listar_ventas(){
+   public function listar_ventas()
+   {
+   
     $venta = new Venta_model();
 
     $data['titulo'] = 'Listar ventas';
@@ -18,6 +20,7 @@ class Ventas_Controller extends BaseController{
                             ->join('usuarios', 'usuarios.id_usuario = venta.id_usuario')
                             ->findAll();
 
+   
     return view('Plantilla/header_view', $data)
          . view('Plantilla/nav_adm_view')
          . view('Backend/Listar_ventas.php')
@@ -33,13 +36,13 @@ public function listar_detalle_ventas($id = null){
     $data['titulo'] = 'Listar detalle de ventas';
 
     $data['ventas'] = $venta
-        ->select('venta.*, usuarios.nombre_usuario, usuarios.apellido_usuario, usuarios.email_usuario')
+        ->select('venta.*, usuarios.nombre_usuario, usuarios.apellido_usuario, usuarios.mail_usuario')
         ->join('usuarios','usuarios.id_usuario = venta.id_usuario')
         ->where('id_venta', $id)
         ->first();
 
     $data['detalle'] = $detalle_venta
-        ->select('detalle_venta.*, productos.descripcion, productos.precio')
+        ->select('detalle_venta.*, productos.descripcion_producto, productos.precio_producto')
         ->join('productos','productos.id_producto = detalle_venta.id_producto')
         ->where('id_venta', $id)
         ->findAll();

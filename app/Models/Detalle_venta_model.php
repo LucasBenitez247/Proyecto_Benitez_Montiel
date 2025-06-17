@@ -12,9 +12,9 @@ class Detalle_venta_model extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_venta','id_producto','precio_unitario'];
+    protected $allowedFields = ['id_venta','id_producto','precio_unitario','cantidad'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
