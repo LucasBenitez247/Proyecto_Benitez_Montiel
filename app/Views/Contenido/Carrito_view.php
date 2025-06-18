@@ -1,10 +1,11 @@
-<link href="<?= base_url('assets/css/miestilo_popup.css')?>" rel="stylesheet" >
+<link href="<?= base_url('assets/css/miestilo_popup.css?v=1')?>" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
 <?php  $cart = \Config\Services::cart();?>
 
 <h1 class= "mt-3 text-center">Carrito de Compras</h1>
-<a href="<?php echo base_url('productos'); ?>" class="my-3 mx-4 btn btn-outline-success">Continuar Comprando</a>
+<a href="<?= base_url('productos'); ?>" class="my-3 mx-4 btn btn-outline-violeta">Continuar Comprando</a>
+
 
 <?php if($cart->contents() == NULL): ?>
     <h2 class="text-center alert alert-danger">El carrito está vacío</h2>
@@ -43,28 +44,28 @@
                 <td>Total Compra: $<?php echo $total;?></td>
                 <td>
                   <a href="<?php echo base_url('vaciar_carrito/all');?>"
-                  class="btn btn-success">
+                  class="btn btn-violeta">
                   <i class="fa-solid fa-cart-shopping"></i>
                   Vaciar Carrito
                 </a>
                 </td>
-               <td><button class="btn btn-success" onclick="abrirPopup()">Ordenar Compra</button></td>
+               <td><button class="btn btn-violeta" onclick="abrirPopup()">Ordenar Compra</button></td>
             </tr>
             <div id="popup" class="popup">
             <div class="popup-content">
                 <h3>¿Qué querés hacer?</h3>
                 <div class="popup-buttons">
                 <a href="<?php echo base_url('productos'); ?>" class="btn btn-secondary">Seguir Comprando</a>
-                <a href="<?php echo base_url('ventas'); ?>" class="btn btn-success">Finalizar Compra</a>
+                <a href="<?php echo base_url('ventas'); ?>" class="btn btn-violeta">Finalizar Compra</a>
                 </div>
             </div>
             </div>
  <?php if (session()->getFlashdata('mensaje')): ?>
-        <!-- Modal Bootstrap -->
+    
 <div class="modal fade" id="modalCompraExitosa" tabindex="-1" aria-labelledby="modalCompraExitosaLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-success text-white">
+      <div class="modal-header bg-violeta">
         <h5 class="modal-title" id="modalCompraExitosaLabel">¡Se agregó al carrito!</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
@@ -73,7 +74,7 @@
       </div>
 
       <div class="modal-footer">
-        <a href="<?= base_url('productos') ?>" class="btn btn-success">Seguir comprando</a>
+        <a href="<?= base_url('productos') ?>" class="btn btn-violeta">Seguir comprando</a>
       </div>
     </div>
   </div>

@@ -6,6 +6,8 @@ use App\Models\Producto_model;
 use App\Models\Categoria_producto_model;
 use App\Models\Venta_model;
 use App\Models\Detalle_venta_model;
+use App\Models\Direccion_usuario_model;
+use App\Models\Usuarios_model;
 
 class Carrito_Controller extends BaseController{
     
@@ -51,43 +53,56 @@ class Carrito_Controller extends BaseController{
 
     $validation->setRules(
         [
-            'direccion' => 'required|max_length[255]',
-            'provincia' => 'required',
-            'localidad' => 'required',
-            'codigo_postal' => 'required|numeric|min_length[4]|max_length[8]',
-            'entrega' => 'required|in_list[retiro,envio]',
-            'pago' => 'required|in_list[tarjeta,efectivo]',
+            'direccion' => 'required|max_length[150]',
+            'ciudad' => 'required|max_length[100]', 
+            'provincia' => 'required|max_length[100]',
+            'cod_postal' => 'required|max_length[20]|integer',
+            'entrega' => 'required',
+            'pago' => 'required'
         ],
         [
             'direccion' => [
-                'required' => 'La dirección es obligatoria',
-                'max_length' => 'La dirección es demasiado larga'
+                'required' => 'La dirección es obligatoria.',
+                'max_length' => 'La dirección no puede exceder los 150 caracteres.'
+            ],
+            'ciudad' => [
+                'required' => 'La ciudad es obligatoria.',
+                'max_length' => 'La ciudad no puede exceder los 100 caracteres.'
             ],
             'provincia' => [
-                'required' => 'Seleccioná una provincia'
+                'required' => 'La provincia es obligatoria.',
+                'max_length' => 'La provincia no puede exceder los 100 caracteres.'
             ],
-            'localidad' => [
-                'required' => 'La localidad es obligatoria'
-            ],
-            'codigo_postal' => [
-                'required' => 'El código postal es obligatorio',
-                'numeric' => 'Debe contener solo números',
-                'min_length' => 'Debe tener al menos 4 dígitos',
-                'max_length' => 'Debe tener como máximo 8 dígitos',
+            'cod_postal' => [
+                'required' => 'El código postal es obligatorio.',
+                'max_length' => 'El código postal no puede exceder los 20 caracteres.',
+                'integer' => 'El código postal debe ser un número entero.'
             ],
             'entrega' => [
-                'required' => 'Debes elegir una opción de entrega',
-                'in_list' => 'Opción de entrega no válida'
+                'required' => 'El método de entrega es obligatorio.'
             ],
             'pago' => [
-                'required' => 'Debes elegir una forma de pago',
-                'in_list' => 'Forma de pago no válida'
-            ]
+                'required' => 'El método de pago es obligatorio.'
+            ],
+
         ]
     );
 
     if ($validation->withRequest($request)->run()) {
-        return redirect()->to('/productos')->with('mensaje', '¡Compra finalizada con éxito!');
+
+
+     $data = [
+        'id_usuario' => session('id'),
+        'direccion' => $request->getPost('direccion'),
+        'ciudad' => $request->getPost('ciudad'),
+        'provincia' => $request->getPost('provincia'),
+        'cod_postal' => $request->getPost('cod_postal'),
+        'entrega' => $request->getPost('entrega'),
+        'pago' => $request->getPost('pago')
+     ];
+    $datos = new Direccion_usuario_model();
+    $datos->insert($data);
+    return redirect()->to('/productos')->with('mensaje', '¡Compra finalizada con éxito!');
     } else {
         $data['validation'] = $validation->getErrors();
         return view('Plantilla/header_view')
@@ -144,6 +159,7 @@ class Carrito_Controller extends BaseController{
 
     return redirect()->to('/productos')->with('mensaje', '¡Compra finalizada con éxito!');
     }
+
 
 
 }

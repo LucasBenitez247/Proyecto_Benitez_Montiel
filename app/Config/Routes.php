@@ -62,4 +62,5 @@ $routes->get('ventas', 'Carrito_Controller::procesar_checkout');
 
 $routes->get('ver_consultas', 'Consulta_Controller::ver_consultas');
 
-$routes->get('listar_ventas', 'Ventas_Controller::listar_ventas');
+$routes->get('listar_ventas_adm', 'Ventas_Controller::listar_ventas');
+$routes->get('ver_detalle/(:num)', 'Ventas_Controller::listar_detalle_ventas/$1');

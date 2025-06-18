@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Detalle_venta_model extends Model
+class Direccion_usuario_model extends Model
 {
-    protected $table      = 'detalle_venta';
-    protected $primaryKey = 'id_detalle_venta';
+    protected $table      = 'direccion_usuario';
+    protected $primaryKey = 'id_direccion';
 
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_venta','id_producto','precio_unitario','cantidad'];
+    protected $allowedFields = ['id_usuario','direccion','ciudad','provincia','cod_postal','entrega', 'pago'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

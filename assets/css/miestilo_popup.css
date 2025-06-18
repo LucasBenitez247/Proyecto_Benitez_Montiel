@@ -26,3 +26,33 @@
 .popup-buttons a {
   margin: 0 10px;
 }
+
+.btn-violeta {
+  background-color: #5e60ce;
+  color: white;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-violeta:hover {
+  background-color: #4a4eb2;
+}
+
+.btn-outline-violeta {
+  color: #5e60ce;
+  border: 2px solid #5e60ce;
+  background-color: transparent;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-violeta:hover {
+  background-color: #5e60ce;
+  color: white;
+}
+
+.bg-violeta {
+  background-color: #5e60ce !important;
+  color: white !important;
+}

@@ -28,3 +28,27 @@ body {
   font-weight: 500;
   font-size: 1.1rem;
 }
+
+.card-header {
+  background-color: #5e60ce;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 12px 20px;
+}
+.card {
+  border: 1px solid #5e60ce;
+}
+
+.btn.btn-violeta {
+  background-color: #5e60ce !important;
+  color: white !important;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.btn.btn-violeta:hover {
+  background-color: #4a4eb2 !important;
+}
