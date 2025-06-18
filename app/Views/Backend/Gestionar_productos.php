@@ -27,7 +27,7 @@
                         <td><?= esc($producto['descripcion_producto']) ?></td>
                         <td><?= esc($producto['stock_producto']) ?></td>
                         <td><?= esc($producto['precio_producto']) ?></td>
-                        <td><?= esc($producto['categoria_producto']) ?></td>
+                        <td><?= esc($producto['nombre_categoria']) ?></td>
                         <td>
                             <img src="<?= base_url('assets/uploads/' . $producto['imagen_producto']) ?>" alt="Imagen" width="80">
                         </td>
