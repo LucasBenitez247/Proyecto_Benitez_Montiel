@@ -130,6 +130,8 @@ if ($validation->withRequest($request)->run() ){
             'nombre'   => $user['nombre_usuario'],
             'apellido' => $user['apellido_usuario'],
             'perfil'   => $user['id_perfil'],
+            'email'    => $user['mail_usuario'],
+            'telefono' => $user['telefono_usuario'],
             'login'    => TRUE
         ];
 
