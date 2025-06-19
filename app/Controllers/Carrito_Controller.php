@@ -144,8 +144,8 @@ class Carrito_Controller extends BaseController{
         $detalle->insert([
             'id_venta'        => $venta_id,
             'id_producto'     => $item['id'],
-            'detalle_cantidad'=> $item['qty'],
-            'detalle_precio'  => $item['price']
+            'cantidad'=> $item['qty'],
+            'precio_unitario'  => $item['price']
         ]);
 
         $producto = $productos_model->find($item['id']);
