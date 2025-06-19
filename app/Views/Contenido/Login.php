@@ -2,11 +2,15 @@
 
 
 
-
+      <?php if (session()->getFlashdata('error')): ?>
+          <div class="alert alert-danger">
+              <?= session()->getFlashdata('error') ?>
+          </div>
+      <?php endif; ?>
 <div class="page-container mt-5">
     <div class="form-container">
       <h2>Login</h2>
-
+      
     <?php if (!empty ($validation)): ?>
         <div class= "alert alert-danger" role ="alert">
           <ul>
@@ -45,3 +49,4 @@
         });
       </script>
       <?php endif; ?>
+      
