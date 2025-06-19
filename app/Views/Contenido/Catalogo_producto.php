@@ -23,7 +23,7 @@
 
                     <p class="card-text"><?php echo "$"; echo $row['precio_producto']; ?> </p>
 
-                    <p class="card-text"><?php echo "Categoria: "; echo $row['categoria_producto']; ?> </p>
+                    <p class="card-text"><?php echo "Categoría: " . esc($row['descripcion_categoria']); ?></p>
 
                     <p class="card-text"><?php echo "Stock: "; echo $row['stock_producto']; ?> </p>
 

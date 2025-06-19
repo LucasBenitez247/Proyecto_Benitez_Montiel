@@ -41,6 +41,8 @@ class Home extends BaseController
         $data['categoria'] = "todos";
         $producto_model = new \App\Models\Producto_model();
         $data['productos'] = $producto_model
+        ->select('productos.*, categoria_producto.descripcion_categoria')
+        ->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')
         ->where('estado_producto', 1)
         ->where('stock_producto >', 0)
         ->findAll();
@@ -57,13 +59,15 @@ public function categoria($nombreCategoria): string
 
     // Buscar la categoría en la base de datos
     $categoria_model = new \App\Models\Categoria_producto_model();
-    $categoria = $categoria_model->where('nombre_categoria', $nombreCategoria)->first();
+    $categoria = $categoria_model->where('descripcion_categoria', $nombreCategoria)->first();
 
     $producto_model = new \App\Models\Producto_model();
 
     if ($categoria) {
         // Si existe la categoría, filtra los productos por esa categoría
         $data['productos'] = $producto_model
+            ->select('productos.*, categoria_producto.descripcion_categoria')
+            ->join('categoria_producto', 'categoria_producto.id_categoria = productos.categoria_producto')
             ->where('estado_producto', 1)
             ->where('stock_producto >', 0)
             ->where('categoria_producto', $categoria['id_categoria'])
