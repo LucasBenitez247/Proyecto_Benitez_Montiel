@@ -119,8 +119,19 @@ class Carrito_Controller extends BaseController{
     $venta = new \App\Models\Venta_model();
     $detalle = new \App\Models\Detalle_venta_model();
     $productos_model = new \App\Models\Producto_model();
+    $direccion_model = new \App\Models\Direccion_usuario_model();
     $request = \Config\Services::request();
-
+    $data_direccion = [
+        'id_usuario' => session('id'),
+        'direccion' => $request->getPost('direccion'),
+        'ciudad' => $request->getPost('ciudad'),
+        'provincia' => $request->getPost('provincia'),
+        'cod_postal' => $request->getPost('cod_postal'),
+        'entrega' => $request->getPost('entrega'),
+        'pago' => $request->getPost('pago')
+    ];
+    $direccion_model->insert($data_direccion);
+    
     $items = $cart->contents();
 
     if (empty($items)) {

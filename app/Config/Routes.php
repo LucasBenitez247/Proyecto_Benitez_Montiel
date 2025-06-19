@@ -58,6 +58,7 @@ $routes->get('eliminar_item/(:any)', 'Carrito_Controller::borrar/$1', ['filter' 
 $routes->get('vaciar_carrito/(:any)', 'Carrito_Controller::borrar/$1', ['filter' => 'auth']);
 
 $routes->post('guardar_venta', 'Carrito_controller::guardar_venta');
+$routes->post('procesar_checkout', 'Carrito_controller::procesar_checkout');
 $routes->get('ventas', 'Carrito_Controller::procesar_checkout', ['filter' => 'auth']);
 
 $routes->get('ver_consultas', 'Consulta_Controller::ver_consultas', ['filter' => 'adm_auth']);
