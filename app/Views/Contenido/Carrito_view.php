@@ -60,25 +60,28 @@
                 </div>
             </div>
             </div>
- <?php if (session()->getFlashdata('mensaje')): ?>
-    
-<div class="modal fade" id="modalCompraExitosa" tabindex="-1" aria-labelledby="modalCompraExitosaLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-violeta">
-        <h5 class="modal-title" id="modalCompraExitosaLabel">¡Se agregó al carrito!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <?= session()->getFlashdata('mensaje') ?>
-      </div>
-
-      <div class="modal-footer">
-        <a href="<?= base_url('productos') ?>" class="btn btn-violeta">Seguir comprando</a>
+    <?php if (session()->getFlashdata('mensaje')): 
+        $mensaje = session()->getFlashdata('mensaje');
+        $esError = strpos($mensaje, 'No hay suficiente stock') !== false;
+    ?>
+    <div class="modal fade" id="modalCompraExitosa" tabindex="-1" aria-labelledby="modalCompraExitosaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header <?= $esError ? 'bg-danger' : 'bg-violeta' ?>">
+            <h5 class="modal-title" id="modalCompraExitosaLabel">
+                <?= $esError ? '¡Error!' : '¡Se agregó al carrito!' ?>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <?= $mensaje ?>
+          </div>
+          <div class="modal-footer">
+            <a href="<?= base_url('productos') ?>" class="btn btn-violeta">Seguir comprando</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 <?php endif; ?>
         <script>
             

@@ -1,9 +1,20 @@
 <link href="<?= base_url('assets/css/mi_estilo_registrar_producto.css')?>"  rel="stylesheet" >
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <div class="page-container">
   <div class="form-container mt-5">
     <h1>Edición de Productos</h1>
 
-
+<?php if (!empty($validation)): ?>
+   
+    <script>
+        Swal.fire({
+            title: 'Error al actualizar',
+            html: `<?php foreach($validation as $error){ echo esc($error) . "<br>"; } ?>`,
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
+    </script>
+<?php endif; ?>
     <?php echo form_open_multipart('actualizar/' . $productos['id_producto']);?>
     <?= form_hidden('id', $productos['id_producto'] ?? '') ?>
       <div class="form-group mb-3">

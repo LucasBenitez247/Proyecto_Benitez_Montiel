@@ -24,11 +24,11 @@
         <?php echo form_open('verificar_usuario')?>
             <div class="mb-4 my-4">
                 <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
-                <input name='email' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <?php echo form_input(['name'=>'email', 'id'=>'email', 'type'=>'email', 'class'=>'form-control', 'placeholder'=>'Ej: tuemail@gmail.com','value'=> set_value('email')])?>
             </div>
             <div class="mb-4">
                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                <input name = 'password' type="password" class="form-control" id="exampleInputPassword1">
+                <?php echo form_input(['name'=>'password', 'id'=>'password', 'type'=>'password', 'class'=>'form-control', 'placeholder'=>'Contraseña'])?>
             </div>
             <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
         <?php echo form_close();?>
