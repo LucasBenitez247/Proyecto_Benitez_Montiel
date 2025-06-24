@@ -137,84 +137,96 @@ class Producto_Controller extends BaseController
         return view('Plantilla/header_view', $data).view('Plantilla/nav_adm_view', $data).view('Backend/editar_productos_view.php', $data).view('Plantilla/footer_view.php', $data);
     }
 
-    public function actualizar_producto($id){
-        $validation = \Config\Services::validation();
-        $request = \Config\Services::request();
 
-         $id = $request->getPost('id');
-         $validation->setRules(
-         
+public function actualizar_producto($id){
+    $validation = \Config\Services::validation();
+    $request = \Config\Services::request();
+
+    $imagen_rules = 'max_size[imagen,4096]|is_image[imagen]';
+    if ($this->request->getFile('imagen')->isValid() && !$this->request->getFile('imagen')->hasMoved()) {
+        $imagen_rules = 'uploaded[imagen]|' . $imagen_rules;
+    }
+    $validation->setRules(
         [
-        'nombre' => 'required|max_length[150]',
-        'precio'=> 'required|decimal|greater_than[0]|max_length[150]',
-        'descripcion'=>'required|max_length[150]',
-        'imagen'=> 'uploaded[imagen]|max_size[imagen,4096]|is_image[imagen]',
-        'stock' => 'required|integer|greater_than_equal_to[0]|max_length[150]',
-        'categorias'=> 'is_not_unique[categoria_producto.id_categoria]',
+            'nombre' => 'required|max_length[150]',
+            'precio'=> 'required|decimal|greater_than[0]|max_length[150]',
+            'descripcion'=>'required|max_length[150]',
+            'imagen'=> $imagen_rules,
+            'stock' => 'required|integer|greater_than_equal_to[0]|max_length[150]',
+            'categorias'=> 'is_not_unique[categoria_producto.id_categoria]',
         ],
-    [
-        'nombre' => [
-            'required'=>'El nombre es requerido',
-            'max_length[150]'=> 'el nombre debe tener como máximo 150 caracteres ',
-        ],
-       
-        'precio'=> [
-        'required'=>'el precio es requerido',
-        'decimal'=> 'El precio debe ser un número decimal',
-        'greater_than'=> 'El precio debe ser mayor que 0',
-        'max_length'=> 'el precio debe tener como máximo 150 caracteres',
-        ],
-        'descripcion'=> [
-        'required'=>'La descripcion es requerida',
-        'max_length'=> 'La descripcion debe tener como máximo 150 caracteres',
-        ],
-
-         'imagen'=>[
-            'uploaded'=>'Debe seleccionar una imagen',
-            'is_image'=>'Debe ser una imagen valida',
-        ],
-
-        'stock' =>[ 
-            'required'=> 'el stock es requerido',
-            'integer'=> 'El stock debe ser un número entero',
-            'greater_than_equal_to'=> 'El stock debe ser mayor o igual a 0',
-            'max_length'=> 'el stock debe tenet como máximo 150 caracteres',
-        ],
-         
-        'categorias'=>[
-            'is_not_unique'=>'Debe seleccionar una categoria',
-
-        ]
+        [
+            'nombre' => [
+                'required'=>'El nombre es requerido',
+                'max_length'=> 'El nombre debe tener como máximo 150 caracteres ',
+            ],
+            'precio'=> [
+                'required'=>'El precio es requerido',
+                'decimal'=> 'El precio debe ser un número decimal',
+                'greater_than'=> 'El precio debe ser mayor que 0',
+                'max_length'=> 'El precio debe tener como máximo 150 caracteres',
+            ],
+            'descripcion'=> [
+                'required'=>'La descripción es requerida',
+                'max_length'=> 'La descripción debe tener como máximo 150 caracteres',
+            ],
+            'imagen'=>[
+                'uploaded'=>'Debe seleccionar una imagen',
+                'is_image'=>'Debe ser una imagen válida',
+            ],
+            'stock' =>[ 
+                'required'=> 'El stock es requerido',
+                'integer'=> 'El stock debe ser un número entero',
+                'greater_than_equal_to'=> 'El stock debe ser mayor o igual a 0',
+                'max_length'=> 'El stock debe tener como máximo 150 caracteres',
+            ],
+            'categorias'=>[
+                'is_not_unique'=>'Debe seleccionar una categoría',
+            ]
         ]
     );
-         
-    $producto_model = new Producto_model();
-    $img = $this->request->getFile('imagen');
 
-     if ($img && $img->isValid() && !$img->hasMoved()) {
-        $nombre_aleatorio = $img->getRandomName();
-        $img->move(ROOTPATH.'assets/uploads', $nombre_aleatorio);
-    } else {
-        $producto = $producto_model->find($id);
-        $nombre_aleatorio = $producto['imagen_producto'];
-    }
-       
+    //  actualiza si la validación es exitosa
+    if ($this->request->getMethod() === 'post' && $validation->withRequest($request)->run()) {
+        $producto_model = new Producto_model();
+        $img = $this->request->getFile('imagen');
+
+        if ($img && $img->isValid() && !$img->hasMoved()) {
+            $nombre_aleatorio = $img->getRandomName();
+            $img->move(ROOTPATH.'assets/uploads', $nombre_aleatorio);
+        } else {
+            $producto = $producto_model->find($id);
+            $nombre_aleatorio = $producto['imagen_producto'];
+        }
 
         $data =[
-            'nombre_producto'=>$request->getpost('nombre'),
-            'precio_producto'=>$request->getpost('precio') ,
-            'descripcion_producto'=>$request->getpost('descripcion') , 
-            'estado_producto'=> 1 ,
-            'imagen_producto'=>$nombre_aleatorio, 
-            'stock_producto' =>$request->getpost('stock'), 
-            'categoria_producto'=>$request->getpost('categorias')
+            'nombre_producto'=>$request->getPost('nombre'),
+            'precio_producto'=>$request->getPost('precio'),
+            'descripcion_producto'=>$request->getPost('descripcion'),
+            'estado_producto'=> 1,
+            'imagen_producto'=>$nombre_aleatorio,
+            'stock_producto' =>$request->getPost('stock'),
+            'categoria_producto'=>$request->getPost('categorias')
         ];
 
-        $productos =new Producto_model();
-        $productos->update($id,$data);
+        $producto_model->update($id, $data);
 
         return redirect()->route('gestionar_producto')->with('mensaje','El producto se modificó correctamente');
+    } else {
+        // Si la validación falla, vuelve a mostrar el formulario con los errores
+        $producto_model = new Producto_model();
+        $categorias = new Categoria_producto_model();
+        $data['validation'] = $validation->getErrors();
+        $data['categorias'] = $categorias->findAll();
+        $data['productos'] = $producto_model->where('id_producto', $id)->first();
+        $data['titulo'] = 'Edición de productos';
+
+        return view('Plantilla/header_view', $data)
+            .view('Plantilla/nav_adm_view', $data)
+            .view('Backend/editar_productos_view.php', $data)
+            .view('Plantilla/footer_view.php', $data);
     }
+}
 
     public function eliminar_producto($id = null) {
     $data = ['estado_producto' => 2];

@@ -23,15 +23,30 @@ class Carrito_Controller extends BaseController{
     public function agregar_carrito(){
         $cart = \Config\Services::cart();
         $request = \Config\Services::request();
+        $producto_model = new \App\Models\Producto_model();
+
+        $id_producto = $request->getPost('id');
+        $producto = $producto_model->find($id_producto);
+        $cantidad_en_carrito = 0;
+
+        foreach ($cart->contents() as $item) {
+            if ($item['id'] == $id_producto) {
+                $cantidad_en_carrito += $item['qty'];
+            }
+        }
+
+       if ($producto && ($producto['stock_producto'] > $cantidad_en_carrito)) {
         $data = array(
-            'id'=>$request->getPost('id'),
-            'name' =>$request->getPost('titulo'),
-            'price'=>$request->getPost('precio'),
-            'qty'=>1
+            'id'    => $id_producto,
+            'name'  => $request->getPost('titulo'),
+            'price' => $request->getPost('precio'),
+            'qty'   => 1
         );
         $cart->insert($data);
-
         return redirect()->route('ver_carrito')->with('mensaje','El producto se agregó al carrito correctamente');
+    } else {
+        return redirect()->route('ver_carrito')->with('mensaje','No hay suficiente stock para este producto');
+    }
     }
 
 
@@ -121,6 +136,13 @@ class Carrito_Controller extends BaseController{
     $productos_model = new \App\Models\Producto_model();
     $direccion_model = new \App\Models\Direccion_usuario_model();
     $request = \Config\Services::request();
+    
+    foreach ($items as $item) {
+        $producto = $productos_model->find($item['id']);
+        if (!$producto || $producto['stock_producto'] < $item['qty']) {
+            return redirect()->to('/ver_carrito')->with('mensaje', 'No hay suficiente stock para ' . $item['name']);
+        }
+    }
     $data_direccion = [
         'id_usuario' => session('id'),
         'direccion' => $request->getPost('direccion'),
